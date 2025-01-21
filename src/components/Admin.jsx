@@ -57,7 +57,7 @@ const Admin = () => {
       <div className={styles.circle}>
         <img
           className={styles.schoolLogo}
-          src="/images/school-logo.svg"
+          src="/myschool/images/school-logo.svg"
           alt=""
         />
         <img
