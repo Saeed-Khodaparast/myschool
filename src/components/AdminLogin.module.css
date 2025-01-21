@@ -1,0 +1,132 @@
+.container {
+  height: 100vh;
+  background-image: url("/images/bg-login.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  color: white;
+  position: relative;
+}
+
+.logo {
+  width: 320px;
+  top: calc(160px - 24px);
+  position: absolute;
+  opacity: 0.05;
+}
+
+.topImage {
+  width: 64px;
+  height: 64px;
+  padding: 8px;
+  top: calc(240px - 40px);
+}
+
+.title {
+  font-weight: 700;
+  font-size: 17px;
+}
+
+.form {
+  width: calc(240px + 40px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.input {
+  width: 100%;
+  text-align: center;
+  border: none;
+  border-bottom: 2px white solid;
+  background-color: transparent;
+  padding: 12px 16px;
+  color: white;
+  font-size: 16px;
+  z-index: 1;
+}
+.input:focus {
+  outline: none;
+}
+
+.subInputContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.errorMessage {
+  height: 12px;
+  align-self: flex-start;
+  color: var(--color-error);
+  font-size: 12px;
+  text-align: start;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.show {
+  opacity: 1;
+}
+.hide {
+  opacity: 0;
+}
+
+.user {
+  margin-top: 16px;
+}
+.pass {
+  margin-top: 8px;
+}
+
+.forgetPass {
+  font-size: 10px;
+  align-self: flex-end;
+  cursor: pointer;
+}
+
+.forgetPass:hover {
+  color: var(--color-primary);
+}
+
+.button {
+  width: 118px;
+  height: 44px;
+  margin-top: 48px;
+  border-radius: 5px;
+  background: linear-gradient(
+    180deg,
+    rgba(117, 198, 255, 0.07) 0%,
+    rgba(0, 54, 255, 0.07) 100%
+  );
+  background-color: transparent;
+  position: relative;
+  color: white;
+  border: none; /* Remove the original border */
+  box-shadow: 0px 0px 10px 1px #000000, 1px 0px 4px 0px #ffffff20 inset;
+  cursor: pointer;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  border-radius: 6px;
+  inset: 0; /* This spreads to all sides */
+  padding: 1.2px; /* This creates the border width */
+  background: linear-gradient(
+    to right,
+    var(--color-primary-transparent),
+    #15265e
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}

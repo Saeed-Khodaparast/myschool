@@ -1,0 +1,75 @@
+.container {
+  composes: container from "./AdminLogin.module.css";
+}
+
+.logo {
+  composes: logo from "./AdminLogin.module.css";
+}
+
+.content {
+  width: calc(320px + 6px);
+  display: flex;
+  margin-top: 27px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.topImage {
+  composes: topImage from "./AdminLogin.module.css";
+  padding: 0;
+}
+
+.title {
+  /* composes: title from "./AdminLogin.module.css"; */
+  font-size: 13px;
+  margin: 24px 0 4px 0;
+  word-wrap: none;
+  word-break: break-all;
+}
+
+.phoneNumber {
+  margin: 0 6px;
+  color: var(--color-primary);
+}
+
+.verificationInput {
+  margin-top: 80px;
+}
+
+.button {
+  composes: button from "./AdminLogin.module.css";
+  grid-column: 1 / 7;
+  grid-row: 3 / 4;
+}
+
+/* .returnBtn {
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  position: absolute;
+  background-color: transparent;
+  border-radius: 50px;
+  left: 16px;
+  top: 24px;
+  transition: background-color 150ms;
+}
+.returnBtn:hover {
+  background-color: var(--color-primary-transparent);
+}
+.returnBtn:active {
+  background-color: var(--color-primary);
+} */
+
+.returnBtn {
+  height: 48px;
+  border-radius: 8px;
+  background-color: transparent;
+  color: gray;
+  cursor: pointer;
+  border: none;
+}
+.returnBtn:hover {
+  color: white;
+}

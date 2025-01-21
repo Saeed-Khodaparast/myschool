@@ -1,0 +1,22 @@
+.image {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  background-image: url("/images/user.png");
+}
+
+.badge {
+  width: 8px;
+  height: 8px;
+  background-image: url("/images/badge.svg");
+  border-radius: 50px;
+  z-index: 1;
+}
+
+.name {
+  font-size: 12px;
+}
