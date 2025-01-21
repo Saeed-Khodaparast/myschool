@@ -1,6 +1,6 @@
 .container {
   height: 100vh;
-  background-image: url("/images/bg-login.png");
+  background-image: url("./images/bg-login.png");
   background-size: cover;
   background-position: center;
   display: flex;

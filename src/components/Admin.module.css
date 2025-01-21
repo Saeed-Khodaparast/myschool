@@ -1,6 +1,6 @@
 .container {
   composes: container from "./AdminLogin.module.css";
-  background-image: url("/images/bg-admin.png");
+  background-image: url("./images/bg-admin.png");
   background-position: -8px -40px;
   background-size: cover;
 }
@@ -8,7 +8,7 @@
 .hexagon {
   width: 176px;
   height: 160px;
-  background-image: url("/images/hexagon.svg");
+  background-image: url("./images/hexagon.svg");
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -21,7 +21,7 @@
 .circle {
   width: 344px;
   height: 344px;
-  background-image: url("/images/circle.svg");
+  background-image: url("./images/circle.svg");
   background-position: center;
   position: absolute;
   top: 0px;
