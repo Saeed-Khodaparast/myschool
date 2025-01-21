@@ -1,6 +1,6 @@
 .container {
   composes: container from "./AdminLogin.module.css";
-  background-image: url("./images/bg-admin.png");
+  background-image: url("/images/bg-admin.png");
   background-position: -8px -40px;
   background-size: cover;
 }
