@@ -3,6 +3,7 @@ import styles from "./Admin.module.css";
 import exitIcon from "../assets/images/ic-exit.svg";
 import notifIcon from "../assets/images/ic-notification.svg";
 import walletIcon from "../assets/images/ic-wallet.svg";
+import logoIcon from "../assets/images/school-logo.svg";
 import editIcon from "../assets/images/ic-edit.svg";
 import ayIcon from "../assets/images/ic-academic-year.svg";
 import miIcon from "../assets/images/ic-management-interface.svg";
@@ -55,11 +56,7 @@ const Admin = () => {
         <Hexagon icon={walletIcon} text="موجودی" />
       </div>
       <div className={styles.circle}>
-        <img
-          className={styles.schoolLogo}
-          src="/myschool/images/school-logo.svg"
-          alt=""
-        />
+        <img className={styles.schoolLogo} src={logoIcon} alt="" />
         <img
           className={styles.editIcon}
           src={editIcon}
