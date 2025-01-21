@@ -7,7 +7,7 @@ import "./App.css";
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/myschool">
       <Routes>
         <Route path="/" element={<AdminLogin />} />
         <Route path="confirmation" element={<LoginConfirm />} />
