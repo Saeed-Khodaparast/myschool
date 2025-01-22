@@ -33,6 +33,22 @@
   scale: 70%;
 }
 
+.loadingScreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  background-color: #fff; /* or any color you prefer */
+}
+.loadingScreen.hide {
+  display: none;
+}
+
 .title {
   width: calc(488px);
   top: calc(320px - 24px);

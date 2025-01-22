@@ -1,6 +1,18 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./Admin.module.css";
+import exitIcon from "../assets/images/ic-exit.svg";
+import notifIcon from "../assets/images/ic-notification.svg";
+import walletIcon from "../assets/images/ic-wallet.svg";
+import logoIcon from "../assets/images/school-logo.svg";
+import editIcon from "../assets/images/ic-edit.svg";
+import ayIcon from "../assets/images/ic-academic-year.svg";
+import miIcon from "../assets/images/ic-management-interface.svg";
+import spIcon from "../assets/images/ic-school-profile.svg";
+import setsIcon from "../assets/images/ic-settings.svg";
+import supIcon from "../assets/images/ic-support.svg";
+import repIcon from "../assets/images/ic-reports.svg";
+import optIcon from "../assets/images/ic-options.svg";
 import Hexagon from "./Hexagon";
 import UserHexagon from "./UserHexagon";
 
@@ -49,26 +61,22 @@ const Admin = () => {
         className={`${styles.hexagon} ${styles.exitContainer}`}
         onClick={() => navigate("/")}
       >
-        <Hexagon icon="/myschool/images/ic-exit.svg" text="خروج" />
+        <Hexagon icon={exitIcon} text="خروج" />
       </div>
       <div className={`${styles.hexagon} ${styles.userContainer}`}>
         <UserHexagon name="نعیمه" />
       </div>
       <div className={`${styles.hexagon} ${styles.notifContainer}`}>
-        <Hexagon icon="/myschool/images/ic-notification.svg" text="اعلان ها" />
+        <Hexagon icon={notifIcon} text="اعلان ها" />
       </div>
       <div className={`${styles.hexagon} ${styles.walContainer}`}>
-        <Hexagon icon="/myschool/images/ic-wallet.svg" text="موجودی" />
+        <Hexagon icon={walletIcon} text="موجودی" />
       </div>
       <div className={styles.circle}>
-        <img
-          className={styles.schoolLogo}
-          src="/myschool/images/school-logo.svg"
-          alt=""
-        />
+        <img className={styles.schoolLogo} src={logoIcon} alt="" />
         <img
           className={styles.editIcon}
-          src="/myschool/images/ic-edit.svg"
+          src={editIcon}
           alt=""
           onClick={handleEditClick}
         />
@@ -85,34 +93,25 @@ const Admin = () => {
         className={`${styles.hexagon} ${styles.ayContainer}`}
         onClick={() => navigate("/selectschool")}
       >
-        <Hexagon
-          icon="/myschool/images/ic-academic-year.svg"
-          text="سال تحصیلی"
-        />
+        <Hexagon icon={ayIcon} text="سال تحصیلی" />
       </div>
       <div className={`${styles.hexagon} ${styles.miContainer}`}>
-        <Hexagon
-          icon="/myschool/images/ic-management-interface.svg"
-          text="رابط مدیریت"
-        />
+        <Hexagon icon={miIcon} text="رابط مدیریت" />
       </div>
       <div className={`${styles.hexagon} ${styles.spContainer}`}>
-        <Hexagon
-          icon="/myschool/images/ic-school-profile.svg"
-          text="پروفایل مدرسه"
-        />
+        <Hexagon icon={spIcon} text="پروفایل مدرسه" />
       </div>
       <div className={`${styles.hexagon} ${styles.setsContainer}`}>
-        <Hexagon icon="/myschool/images/ic-settings.svg" text="تنظیمات" />
+        <Hexagon icon={setsIcon} text="تنظیمات" />
       </div>
       <div className={`${styles.hexagon} ${styles.supContainer}`}>
-        <Hexagon icon="/myschool/images/ic-support.svg" text="پشتیبانی" />
+        <Hexagon icon={supIcon} text="پشتیبانی" />
       </div>
       <div className={`${styles.hexagon} ${styles.repContainer}`}>
-        <Hexagon icon="/myschool/images/ic-reports.svg" text="گزارشات" />
+        <Hexagon icon={repIcon} text="گزارشات" />
       </div>
       <div className={`${styles.hexagon} ${styles.optContainer}`}>
-        <Hexagon icon="/myschool/images/ic-options.svg" text="آپشن" />
+        <Hexagon icon={optIcon} text="آپشن" />
       </div>
     </div>
   );

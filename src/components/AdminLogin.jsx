@@ -1,8 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import styles from "./AdminLogin.module.css";
-import topImage from "../assets/images/ic-login.svg";
-import logo from "../assets/images/logo.svg";
 
 const AdminLogin = () => {
   const [user, setUser] = useState("");
@@ -78,8 +76,12 @@ const AdminLogin = () => {
 
   return (
     <div className={styles.container}>
-      <img className={styles.logo} src={logo} alt="" />
-      <img className={styles.topImage} src={topImage} alt="" />
+      <img className={styles.logo} src="/myschool/images/logo.svg" alt="" />
+      <img
+        className={styles.topImage}
+        src="/myschool/images/ic-login.svg"
+        alt=""
+      />
       <h1 className={styles.title}>ورود به سیستم مدیریت مدارس</h1>
       <form className={styles.form} onSubmit={handleSubmit}>
         <input

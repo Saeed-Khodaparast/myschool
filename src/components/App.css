@@ -2,11 +2,28 @@
   --color-primary: #3270ff;
   --color-primary-transparent: #3270ffaa;
   --color-error: #ff4444;
+  --color-primary-dark-background: #171717;
 }
 
 @font-face {
   font-family: "iransans_fd";
   src: url(../assets/fonts/iransans_fd.TTF);
+}
+@font-face {
+  font-family: "iransansBold";
+  src: url("../assets/font/iransans_fd_bold.TTF");
+}
+@font-face {
+  font-family: "iransansRegular";
+  src: url("../assets/font/iransans_fd_regular.TTF");
+}
+@font-face {
+  font-family: "iransansLight";
+  src: url("../assets/font/iransans_fd_light.TTF");
+}
+@font-face {
+  font-family: "iransansMedium";
+  src: url("../assets/font/iransans_fd_medium.TTF");
 }
 
 * {
@@ -15,4 +32,8 @@
   box-sizing: border-box;
   direction: rtl;
   font-family: "iransans_fd", sans-serif;
+}
+
+body {
+  background-color: var(--color-primary-dark-background);
 }

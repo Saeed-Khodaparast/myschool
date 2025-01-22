@@ -1,5 +1,6 @@
-import styles from "./Hexagon.module.css";
-const Hexagon = ({ icon, iconSize, text }) => {
+import styles from "./BigHexagon.module.css";
+
+const BigHexagon = ({ icon, iconSize, text }) => {
   return (
     <div className={styles.container}>
       <img
@@ -12,4 +13,4 @@ const Hexagon = ({ icon, iconSize, text }) => {
   );
 };
 
-export default Hexagon;
+export default BigHexagon;

@@ -1,0 +1,36 @@
+.container {
+  composes: container from "./Admin.module.css";
+}
+.circle {
+  composes: circle from "./Admin.module.css";
+}
+
+.schoolLogo {
+  composes: schoolLogo from "./Admin.module.css";
+}
+
+.hexagon {
+  composes: hexagon from "./Admin.module.css";
+}
+
+.title {
+  composes: title from "./Admin.module.css";
+}
+
+.bigHexagon {
+  composes: bigHexagon from "./SelectSchool.module.css";
+}
+
+.returnContainer {
+  composes: returnContainer from "./SelectSchool.module.css";
+}
+
+.morningContainer {
+  top: calc(240px + 88px);
+  left: calc(800px - 84px);
+}
+
+.eveningContainer {
+  top: calc(240px + 88px);
+  left: calc(160px + 24px);
+}

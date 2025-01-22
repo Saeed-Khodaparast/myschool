@@ -1,20 +1,30 @@
-.image {
-  width: 48px;
-  height: 48px;
+.container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 50px;
-  background-image: url("/myschool/images/user.png");
+  gap: 4px;
+  position: relative;
+}
+
+.image {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
 }
 
 .badge {
   width: 8px;
   height: 8px;
-  background-image: url("/myschool/images/badge.svg");
   border-radius: 50px;
   z-index: 1;
+  position: absolute;
+  top: 42px;
+  left: 4px;
 }
 
 .name {

@@ -1,0 +1,44 @@
+.container {
+  composes: container from "./Admin.module.css";
+}
+
+.circle {
+  composes: circle from "./Admin.module.css";
+}
+
+.schoolLogo {
+  composes: schoolLogo from "./Admin.module.css";
+}
+
+.hexagon {
+  composes: hexagon from "./Admin.module.css";
+}
+
+.title {
+  composes: title from "./Admin.module.css";
+}
+
+.bigHexagon {
+  composes: hexagon from "./Admin.module.css";
+  width: 600px;
+  height: 424px;
+  scale: 80%;
+  background-image: url("/myschool/images/big-hexagon.svg");
+  gap: 24px;
+}
+
+.returnContainer {
+  left: 0px;
+  top: 10px;
+  gap: 16px;
+}
+
+.boyContainer {
+  top: calc(240px + 88px);
+  left: calc(800px - 84px);
+}
+
+.girlContainer {
+  top: calc(240px + 88px);
+  left: calc(160px + 24px);
+}

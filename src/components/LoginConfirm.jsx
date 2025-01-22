@@ -1,7 +1,4 @@
 import styles from "./LoginConfirm.module.css";
-import topImage from "../assets/images/ic-loginConfirm.svg";
-import returnIcon from "../assets/images/ic-left-arrow.svg";
-import logo from "../assets/images/logo.svg";
 import { useEffect, useState, useRef } from "react";
 import VerificationInput from "./VerificationInput";
 import ResendTimer from "./ResendTimer";
@@ -68,15 +65,13 @@ const LoginConfirm = () => {
 
   return (
     <div className={styles.container}>
-      <img className={styles.logo} src={logo} alt="" />
-      {/* <img
-        className={styles.returnBtn}
-        src={returnIcon}
-        onClick={handleReturn}
-        alt=""
-      /> */}
+      <img className={styles.logo} src="/myschool/images/logo.svg" alt="" />
       <main className={styles.content}>
-        <img className={styles.topImage} src={topImage} alt="" />
+        <img
+          className={styles.topImage}
+          src="/myschool/images/ic-loginConfirm.svg"
+          alt=""
+        />
         <p className={styles.title}>
           پیامکی حاوی کد اعتبارسنجی را به شماره تلفن
           <span className={styles.phoneNumber}>09198863479</span>
