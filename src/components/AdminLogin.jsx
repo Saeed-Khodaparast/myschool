@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "./AdminLogin.module.css";
 
 const AdminLogin = () => {
@@ -7,7 +7,17 @@ const AdminLogin = () => {
   const [pass, setPass] = useState("");
   const [error, setError] = useState("");
   const [isVisible, setIsVisible] = useState(false);
+  const [isBackgroundLoaded, setIsBackgroundLoaded] = useState(false);
   const navigate = useNavigate();
+
+  // Add useEffect to handle background loading
+  useEffect(() => {
+    const img = new Image();
+    img.src = "/myschool/images/bg-login.png"; // Replace with your actual background image URL
+    img.onload = () => {
+      setIsBackgroundLoaded(true);
+    };
+  }, []);
 
   const showTemporaryError = (message) => {
     setError(message);
@@ -75,7 +85,13 @@ const AdminLogin = () => {
   };
 
   return (
-    <div className={styles.container}>
+    <div
+      className={styles.container}
+      style={{
+        opacity: isBackgroundLoaded ? 1 : 0,
+        // transition: "opacity 0.6s ease",
+      }}
+    >
       <img className={styles.logo} src="/myschool/images/logo.svg" alt="" />
       <img
         className={styles.topImage}

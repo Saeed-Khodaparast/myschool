@@ -2,12 +2,29 @@ import styles from "./SelectShift.module.css";
 import Hexagon from "./Hexagon";
 import BigHexagon from "./BigHexagon";
 import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 const SelectShift = () => {
+  const [isBackgroundLoaded, setIsBackgroundLoaded] = useState(false);
   const navigate = useNavigate();
 
+  // Add useEffect to handle background loading
+  useEffect(() => {
+    const img = new Image();
+    img.src = "/myschool/images/bg-admin.png"; // Replace with your actual background image URL
+    img.onload = () => {
+      setIsBackgroundLoaded(true);
+    };
+  }, []);
+
   return (
-    <div className={styles.container}>
+    <div
+      className={styles.container}
+      style={{
+        opacity: isBackgroundLoaded ? 1 : 0,
+        // transition: "opacity 0.6s ease",
+      }}
+    >
       <div
         className={`${styles.hexagon} ${styles.returnContainer}`}
         onClick={() => navigate("/selectschool")}

@@ -7,7 +7,17 @@ import { useNavigate } from "react-router-dom";
 const LoginConfirm = () => {
   const [inputValue, setInputValue] = useState("");
   const inputRefs = useRef([]);
+  const [isBackgroundLoaded, setIsBackgroundLoaded] = useState(false);
   const navigate = useNavigate();
+
+  // Add useEffect to handle background loading
+  useEffect(() => {
+    const img = new Image();
+    img.src = "/myschool/images/bg-login.png"; // Replace with your actual background image URL
+    img.onload = () => {
+      setIsBackgroundLoaded(true);
+    };
+  }, []);
 
   const handleReturn = () => {
     navigate("/");
@@ -64,7 +74,13 @@ const LoginConfirm = () => {
   }
 
   return (
-    <div className={styles.container}>
+    <div
+      className={styles.container}
+      style={{
+        opacity: isBackgroundLoaded ? 1 : 0,
+        // transition: "opacity 0.6s ease",
+      }}
+    >
       <img className={styles.logo} src="/myschool/images/logo.svg" alt="" />
       <main className={styles.content}>
         <img

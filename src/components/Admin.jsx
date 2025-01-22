@@ -42,7 +42,7 @@ const Admin = () => {
       className={styles.container}
       style={{
         opacity: isBackgroundLoaded ? 1 : 0,
-        transition: "opacity 0.1s ease",
+        // transition: "opacity 0.6s ease",
       }}
     >
       <div
