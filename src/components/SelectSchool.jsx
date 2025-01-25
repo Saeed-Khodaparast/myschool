@@ -43,17 +43,28 @@ const SelectSchool = () => {
         />
       </div>
       <p className={styles.title}>سیستم مدیریت مدرسه غیر انتفاعی طرح نو</p>
-      <div
-        className={`${styles.bigHexagon} ${styles.boyContainer}`}
-        onClick={() => navigate("/selectshift")}
-      >
-        <BigHexagon icon="/myschool/images/ic-boy.svg" text="مدرسه پسرانه" />
+      <div className={styles.boyContainer}>
+        <BigHexagon
+          gender="boy"
+          icon="/myschool/images/ic-boy.svg"
+          hoverIcon="/myschool/images/ic-boy-on.svg"
+          back="/myschool/images/big-hexagon.svg"
+          backHover="/myschool/images/big-hexagon-on-boy.svg"
+          handleClick={() => navigate("/selectshift")}
+          text="مدرسه پسرانه"
+        />
       </div>
-      <div
-        className={`${styles.bigHexagon} ${styles.girlContainer}`}
-        onClick={() => navigate("/selectshift")}
-      >
-        <BigHexagon icon="/myschool/images/ic-girl.svg" text="مدرسه دخترانه" />
+
+      <div className={styles.girlContainer}>
+        <BigHexagon
+          gender="girl"
+          icon="/myschool/images/ic-girl.svg"
+          hoverIcon="/myschool/images/ic-girl-on.svg"
+          back="/myschool/images/big-hexagon.svg"
+          backHover="/myschool/images/big-hexagon-on-girl.svg"
+          handleClick={() => navigate("/selectshift")}
+          text="مدرسه دخترانه"
+        />
       </div>
     </div>
   );

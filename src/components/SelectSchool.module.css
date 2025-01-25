@@ -18,27 +18,41 @@
   composes: title from "./Admin.module.css";
 }
 
-.bigHexagon {
-  composes: hexagon from "./Admin.module.css";
-  width: 600px;
-  height: 424px;
-  scale: 80%;
-  background-image: url("/myschool/images/big-hexagon.svg");
-  gap: 24px;
-}
-
 .returnContainer {
   left: 0px;
   top: 10px;
   gap: 16px;
 }
 
+.boyContainer,
+.girlContainer {
+  position: absolute;
+}
+
 .boyContainer {
-  top: calc(240px + 88px);
-  left: calc(800px - 84px);
+  top: calc(35.35vw);
+  left: calc(62vw);
 }
 
 .girlContainer {
-  top: calc(240px + 88px);
-  left: calc(160px + 24px);
+  top: calc(35.2vw);
+  left: calc(27.5vw);
+}
+
+@media (max-width: 1500px) {
+  .boyContainer {
+    top: calc(35vw);
+    left: calc(61.9vw);
+  }
+
+  .girlContainer {
+    top: calc(35.1vw);
+    left: calc(27.4vw);
+  }
+}
+
+@media (max-width: 1440px) {
+  .container {
+    display: none;
+  }
 }

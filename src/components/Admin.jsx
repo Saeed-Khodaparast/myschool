@@ -45,20 +45,42 @@ const Admin = () => {
         // transition: "opacity 0.6s ease",
       }}
     >
-      <div
-        className={`${styles.hexagon} ${styles.exitContainer}`}
-        onClick={() => navigate("/")}
-      >
-        <Hexagon icon="/myschool/images/ic-exit.svg" text="خروج" />
+      <div className={styles.exitContainer}>
+        <Hexagon
+          icon="/myschool/images/ic-exit.svg"
+          hoverIcon="/myschool/images/ic-exit-on.svg"
+          back="/myschool/images/hexagon.svg"
+          backHover="/myschool/images/hexagon-on.svg"
+          text="خروج"
+          handleClick={() => navigate("/")}
+        />
       </div>
-      <div className={`${styles.hexagon} ${styles.userContainer}`}>
-        <UserHexagon name="نعیمه" />
+      <div className={styles.userContainer}>
+        <UserHexagon
+          image="/myschool/images/user.png"
+          stateIcon="/myschool/images/badge-green.svg"
+          back="/myschool/images/hexagon.svg"
+          backHover="/myschool/images/hexagon-on.svg"
+          text="نعیمه"
+        />
       </div>
-      <div className={`${styles.hexagon} ${styles.notifContainer}`}>
-        <Hexagon icon="/myschool/images/ic-notification.svg" text="اعلان ها" />
+      <div className={styles.notifContainer}>
+        <Hexagon
+          icon="/myschool/images/ic-notification.svg"
+          hoverIcon="/myschool/images/ic-notification-on.svg"
+          back="/myschool/images/hexagon.svg"
+          backHover="/myschool/images/hexagon-on.svg"
+          text="اعلان ها"
+        />
       </div>
-      <div className={`${styles.hexagon} ${styles.walContainer}`}>
-        <Hexagon icon="/myschool/images/ic-wallet.svg" text="موجودی" />
+      <div className={styles.walContainer}>
+        <Hexagon
+          icon="/myschool/images/ic-wallet.svg"
+          hoverIcon="/myschool/images/ic-wallet-on.svg"
+          back="/myschool/images/hexagon.svg"
+          backHover="/myschool/images/hexagon-on.svg"
+          text="موجودی"
+        />
       </div>
       <div className={styles.circle}>
         <img
@@ -81,38 +103,69 @@ const Admin = () => {
         />
       </div>
       <p className={styles.title}>سیستم مدیریت مدرسه غیر انتفاعی طرح نو</p>
-      <div
-        className={`${styles.hexagon} ${styles.ayContainer}`}
-        onClick={() => navigate("/selectschool")}
-      >
+      <div className={styles.ayContainer}>
         <Hexagon
           icon="/myschool/images/ic-academic-year.svg"
+          hoverIcon="/myschool/images/ic-academic-year-on.svg"
+          back="/myschool/images/hexagon.svg"
+          backHover="/myschool/images/hexagon-on.svg"
           text="سال تحصیلی"
+          handleClick={() => navigate("/selectschool")}
         />
       </div>
-      <div className={`${styles.hexagon} ${styles.miContainer}`}>
+      <div className={styles.miContainer}>
         <Hexagon
           icon="/myschool/images/ic-management-interface.svg"
+          hoverIcon="/myschool/images/ic-management-interface-on.svg"
+          back="/myschool/images/hexagon.svg"
+          backHover="/myschool/images/hexagon-on.svg"
           text="رابط مدیریت"
         />
       </div>
-      <div className={`${styles.hexagon} ${styles.spContainer}`}>
+      <div className={styles.spContainer}>
         <Hexagon
           icon="/myschool/images/ic-school-profile.svg"
+          hoverIcon="/myschool/images/ic-school-profile-on.svg"
+          back="/myschool/images/hexagon.svg"
+          backHover="/myschool/images/hexagon-on.svg"
           text="پروفایل مدرسه"
         />
       </div>
-      <div className={`${styles.hexagon} ${styles.setsContainer}`}>
-        <Hexagon icon="/myschool/images/ic-settings.svg" text="تنظیمات" />
+      <div className={styles.setsContainer}>
+        <Hexagon
+          icon="/myschool/images/ic-settings.svg"
+          hoverIcon="/myschool/images/ic-settings-on.svg"
+          back="/myschool/images/hexagon.svg"
+          backHover="/myschool/images/hexagon-on.svg"
+          text="تنظیمات"
+        />
       </div>
-      <div className={`${styles.hexagon} ${styles.supContainer}`}>
-        <Hexagon icon="/myschool/images/ic-support.svg" text="پشتیبانی" />
+      <div className={styles.supContainer}>
+        <Hexagon
+          icon="/myschool/images/ic-support.svg"
+          hoverIcon="/myschool/images/ic-support-on.svg"
+          back="/myschool/images/hexagon.svg"
+          backHover="/myschool/images/hexagon-on.svg"
+          text="پشتیبانی"
+        />
       </div>
-      <div className={`${styles.hexagon} ${styles.repContainer}`}>
-        <Hexagon icon="/myschool/images/ic-reports.svg" text="گزارشات" />
+      <div className={styles.repContainer}>
+        <Hexagon
+          icon="/myschool/images/ic-reports.svg"
+          hoverIcon="/myschool/images/ic-reports-on.svg"
+          back="/myschool/images/hexagon.svg"
+          backHover="/myschool/images/hexagon-on.svg"
+          text="گزارشات"
+        />
       </div>
-      <div className={`${styles.hexagon} ${styles.optContainer}`}>
-        <Hexagon icon="/myschool/images/ic-options.svg" text="آپشن" />
+      <div className={styles.optContainer}>
+        <Hexagon
+          icon="/myschool/images/ic-options.svg"
+          hoverIcon="/myschool/images/ic-options-on.svg"
+          back="/myschool/images/hexagon.svg"
+          backHover="/myschool/images/hexagon-on.svg"
+          text="آپشن"
+        />
       </div>
     </div>
   );

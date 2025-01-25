@@ -3,19 +3,105 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 32px;
+  gap: 24px;
+  cursor: pointer;
+}
+
+.imageWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.imageWrapper img {
+  display: block;
+  position: absolute;
+  margin: auto;
+}
+
+.back,
+.backHover {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.icon,
+.smallIcon,
+.defaultIcon,
+.hoverIcon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -120%);
 }
 
 .icon {
   width: 80px;
   height: 80px;
+  z-index: 1;
 }
 
 .smallIcon {
   width: 24px;
   height: 24px;
+  z-index: 1;
+}
+
+.defaultIcon {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  opacity: 1;
+}
+
+.hoverIcon {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  opacity: 0;
+}
+
+.back,
+.backHover {
+  width: 31vw;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  opacity: 0;
+}
+
+.back {
+  opacity: 1;
+}
+
+.container:hover .defaultIcon {
+  opacity: 0;
+}
+
+.container:hover .hoverIcon {
+  opacity: 1;
+}
+
+.container:hover .back {
+  opacity: 0;
+}
+
+.container:hover .backHover {
+  opacity: 1;
 }
 
 .text {
   font-size: 20px;
+  z-index: 1;
+}
+
+.container:hover .textBlue {
+  color: #75c6ff;
+}
+
+.container:hover .textPink {
+  color: #ff85ce;
 }
