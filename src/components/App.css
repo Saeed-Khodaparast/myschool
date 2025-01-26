@@ -3,6 +3,9 @@
   --color-primary-transparent: #3270ffaa;
   --color-error: #ff4444;
   --color-primary-dark-background: #151a23;
+  --color-input-placeholder: #909090;
+  --color-logo-circle-background: #11151b;
+  --color-main-title-background: #00000066;
 }
 
 @font-face {

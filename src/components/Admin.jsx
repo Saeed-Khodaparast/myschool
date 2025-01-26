@@ -110,7 +110,7 @@ const Admin = () => {
           back="/myschool/images/hexagon.svg"
           backHover="/myschool/images/hexagon-on.svg"
           text="سال تحصیلی"
-          handleClick={() => navigate("/selectschool")}
+          // handleClick={() => navigate("/selectschool")}
         />
       </div>
       <div className={styles.miContainer}>

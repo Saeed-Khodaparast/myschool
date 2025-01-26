@@ -5,10 +5,14 @@ import styles from "./AdminLogin.module.css";
 const AdminLogin = () => {
   const [user, setUser] = useState("");
   const [pass, setPass] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState("");
   const [isVisible, setIsVisible] = useState(false);
   const [isBackgroundLoaded, setIsBackgroundLoaded] = useState(false);
   const navigate = useNavigate();
+
+  const USER_NAME = "admin";
+  const PASSWORD = "admin";
 
   // Add useEffect to handle background loading
   useEffect(() => {
@@ -18,6 +22,18 @@ const AdminLogin = () => {
       setIsBackgroundLoaded(true);
     };
   }, []);
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
+
+  const clearInput = (field) => {
+    if (field === "username") {
+      setUser("");
+    } else if (field === "password") {
+      setPass("");
+    }
+  };
 
   const showTemporaryError = (message) => {
     setError(message);
@@ -29,21 +45,21 @@ const AdminLogin = () => {
   };
 
   const handleUserChange = (e) => {
-    if (e.target.value.trim) {
-      setUser(e.target.value);
-    }
+    e.target.value = e.target.value.trim();
+    setUser(e.target.value);
   };
 
   const handPassChange = (e) => {
-    if (e.target.value.trim) {
-      setPass(e.target.value);
-    }
+    e.target.value = e.target.value.trim();
+    setPass(e.target.value);
   };
 
   const handleForgetPassword = () => {};
 
   const handleSubmit = (e) => {
     e.preventDefault(); // Prevents the default form submission behavior
+
+    navigate("/confirmation");
 
     // Validate inputs
     if (!user || !pass) {
@@ -53,6 +69,11 @@ const AdminLogin = () => {
 
     // Here you can add your login logic
     console.log("Form submitted:", { user, pass });
+
+    // if (user.trim() === USER_NAME && pass.trim() === PASSWORD) {
+    //   navigate("/confirmation");
+    //   return;
+    // }
 
     // Replace with your actual API endpoint
     // fetch("/api/login", {
@@ -89,7 +110,6 @@ const AdminLogin = () => {
       className={styles.container}
       style={{
         opacity: isBackgroundLoaded ? 1 : 0,
-        // transition: "opacity 0.6s ease",
       }}
     >
       <img className={styles.logo} src="/myschool/images/logo.svg" alt="" />
@@ -100,18 +120,33 @@ const AdminLogin = () => {
       />
       <h1 className={styles.title}>ورود به سیستم مدیریت مدارس</h1>
       <form className={styles.form} onSubmit={handleSubmit}>
-        <input
-          className={`${styles.input} ${styles.user}`}
-          type="text"
-          placeholder="نام کاربری"
-          value={user}
-          onInvalid={(e) => {
-            e.preventDefault();
-            showTemporaryError("ورود این فیلد اجباری است");
-          }}
-          onChange={handleUserChange}
-          required
-        />
+        <div className={styles.inputContainer}>
+          <input
+            className={`${styles.input} ${styles.user}`}
+            type="text"
+            placeholder="نام کاربری"
+            title=""
+            spellCheck="false"
+            value={user}
+            onInvalid={(e) => {
+              e.preventDefault();
+              showTemporaryError("ورود این فیلد اجباری است");
+            }}
+            onChange={handleUserChange}
+            required
+          />{" "}
+          {user && user.trim() !== "" && (
+            <img
+              className={`${styles.icon} ${styles.userIcon}`}
+              src="/myschool/images/ic-close.svg"
+              alt=""
+              onClick={() => clearInput("username")}
+            />
+          )}
+          <span className={`${styles.userTitle} ${user ? styles.filled : ""}`}>
+            نام کاربری
+          </span>
+        </div>
         <span
           className={`${styles.errorMessage} ${
             isVisible ? styles.show : styles.hide
@@ -119,18 +154,37 @@ const AdminLogin = () => {
         >
           {error}
         </span>
-        <input
-          className={`${styles.input} ${styles.pass}`}
-          type="password"
-          placeholder="رمز عبور"
-          value={pass}
-          onInvalid={(e) => {
-            e.preventDefault();
-            showTemporaryError("ورود این فیلد اجباری است");
-          }}
-          onChange={handPassChange}
-          required
-        />
+        <div className={styles.inputContainer}>
+          <input
+            className={`${styles.input} ${styles.pass}`}
+            type={showPassword ? "text" : "password"}
+            placeholder="رمز عبور"
+            title=""
+            spellCheck="false"
+            value={pass}
+            onInvalid={(e) => {
+              e.preventDefault();
+              showTemporaryError("ورود این فیلد اجباری است");
+            }}
+            onChange={handPassChange}
+            required
+          />
+          {pass && (
+            <img
+              className={`${styles.icon} ${styles.passIcon}`}
+              src={
+                showPassword
+                  ? "/myschool/images/ic-eye-close.svg"
+                  : "/myschool/images/ic-eye.svg"
+              }
+              alt=""
+              onClick={togglePasswordVisibility}
+            />
+          )}
+          <span className={`${styles.passTitle} ${pass ? styles.filled : ""}`}>
+            رمز عبور
+          </span>
+        </div>
         <div className={styles.subInputContainer}>
           <span
             className={`${styles.errorMessage} ${

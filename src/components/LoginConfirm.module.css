@@ -1,9 +1,23 @@
 .container {
-  composes: container from "./AdminLogin.module.css";
+  height: 100vh;
+  min-height: 713px;
+  background-image: url("/myschool/images/bg-login.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  color: white;
+  position: relative;
 }
 
 .logo {
-  composes: logo from "./AdminLogin.module.css";
+  width: 21vw;
+  top: calc(160px - 24px);
+  position: absolute;
+  opacity: 0.05;
 }
 
 .content {
@@ -17,12 +31,12 @@
 }
 
 .topImage {
-  composes: topImage from "./AdminLogin.module.css";
-  padding: 0;
+  width: 5vw;
+  height: 5vw;
+  padding: 8px;
 }
 
 .title {
-  /* composes: title from "./AdminLogin.module.css"; */
   font-size: 13px;
   margin: 24px 0 4px 0;
   word-wrap: none;
@@ -39,29 +53,40 @@
 }
 
 .button {
-  composes: button from "./AdminLogin.module.css";
-  grid-column: 1 / 7;
-  grid-row: 3 / 4;
-}
-
-/* .returnBtn {
-  width: 40px;
-  height: 40px;
-  padding: 8px;
-  position: absolute;
+  width: 118px;
+  height: 44px;
+  margin-top: 48px;
+  border-radius: 5px;
+  background: linear-gradient(
+    180deg,
+    rgba(117, 198, 255, 0.07) 0%,
+    rgba(0, 54, 255, 0.07) 100%
+  );
   background-color: transparent;
-  border-radius: 50px;
-  left: 16px;
-  top: 24px;
-  transition: background-color 150ms;
+  position: relative;
+  color: white;
+  border: none; /* Remove the original border */
+  box-shadow: 0px 0px 10px 1px #000000, 1px 0px 4px 0px #ffffff20 inset;
+  cursor: pointer;
 }
-.returnBtn:hover {
-  background-color: var(--color-primary-transparent);
-}
-.returnBtn:active {
-  background-color: var(--color-primary);
-} */
 
+.button::before {
+  content: "";
+  position: absolute;
+  border-radius: 6px;
+  inset: 0; /* This spreads to all sides */
+  padding: 1.2px; /* This creates the border width */
+  background: linear-gradient(
+    to right,
+    var(--color-primary-transparent),
+    #15265e
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
 .returnBtn {
   height: 48px;
   border-radius: 8px;
@@ -72,4 +97,10 @@
 }
 .returnBtn:hover {
   color: white;
+}
+
+@media (max-width: 1440px) {
+  .container {
+    display: none;
+  }
 }

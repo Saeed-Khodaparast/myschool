@@ -1,5 +1,6 @@
 .container {
   height: 100vh;
+  min-height: 713px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -27,6 +28,9 @@
   align-items: center;
   scale: 70%;
 }
+.circle:hover {
+  background-image: url("/myschool/images/circle-on.svg");
+}
 
 .loadingScreen {
   position: fixed;
@@ -52,24 +56,23 @@
   text-align: center;
   padding: 8px 0;
   border-radius: 50px;
-  background-color: rgb(0, 0, 0, 40%);
+  background-color: var(--color-main-title-background);
 }
 
 .schoolLogo {
-  width: 72%;
-  height: 72%;
+  width: 84%;
+  height: 82%;
   border-radius: 100%;
 }
 
 .editIcon {
   width: 56px;
   height: 56px;
-  padding: 8px;
+  padding: 12px;
   position: absolute;
-  border-radius: 50px;
-  top: calc(280px - 48px);
-  background-color: #11151b;
   border-radius: 100%;
+  top: calc(280px - 48px);
+  background-color: var(--color-logo-circle-background);
   cursor: pointer;
 }
 
@@ -139,7 +142,7 @@
   top: 40.6vw;
 }
 
-@media (max-height: 680px) {
+@media (max-height: 712px) {
   .exitContainer {
     left: 5.1vw;
     top: 5.5vw;

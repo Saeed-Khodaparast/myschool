@@ -1,5 +1,6 @@
 .container {
   height: 100vh;
+  min-height: 713px;
   background-image: url("/myschool/images/bg-login.png");
   background-size: cover;
   background-position: center;
@@ -7,52 +8,124 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 16px;
+  gap: 8px;
   color: white;
   position: relative;
 }
 
 .logo {
-  width: 320px;
+  width: 21vw;
   top: calc(160px - 24px);
   position: absolute;
   opacity: 0.05;
 }
 
 .topImage {
-  width: 64px;
-  height: 64px;
+  width: 5vw;
+  height: 5vw;
   padding: 8px;
-  top: calc(240px - 40px);
 }
 
 .title {
   font-weight: 700;
   font-size: 17px;
+  margin-top: 8px;
 }
 
 .form {
-  width: calc(240px + 40px);
+  width: 18vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 8px;
+  gap: 4px;
+  position: relative;
 }
 
+.inputContainer {
+  position: relative;
+  width: 100%;
+}
 .input {
   width: 100%;
-  text-align: center;
+  text-align: start;
   border: none;
   border-bottom: 2px white solid;
   background-color: transparent;
-  padding: 12px 16px;
+  padding: 24px 8px 12px 32px;
   color: white;
-  font-size: 16px;
+  font-size: 15px;
   z-index: 1;
 }
 .input:focus {
   outline: none;
+}
+
+.userTitle,
+.passTitle {
+  position: absolute;
+  margin-right: 8px;
+  top: 4px;
+  right: 0;
+  color: var(--color-input-placeholder);
+  font-size: 12px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.passTitle {
+  /* top: 0px; */
+}
+
+.input::-webkit-input-placeholder {
+  color: var(--color-input-placeholder);
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+.input:-moz-placeholder {
+  color: var(--color-input-placeholder);
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+.input::-moz-placeholder {
+  color: var(--color-input-placeholder);
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+.input:-ms-input-placeholder {
+  color: var(--color-input-placeholder);
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+/* Hide on focus */
+.input:focus::-webkit-input-placeholder {
+  opacity: 0;
+}
+.input:focus:-moz-placeholder {
+  opacity: 0;
+}
+.input:focus::-moz-placeholder {
+  opacity: 0;
+}
+.input:focus:-ms-input-placeholder {
+  opacity: 0;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  padding: 2px;
+  position: absolute;
+  top: 60%;
+  left: 0px;
+  transform: translateY(-25%);
+  cursor: pointer;
+  font-size: 16px;
+  z-index: 2;
+}
+
+.passIcon {
+  /* transform: translateY(-20%); */
 }
 
 .subInputContainer {
@@ -63,9 +136,10 @@
 
 .errorMessage {
   height: 12px;
+  margin-right: 8px;
   align-self: flex-start;
   color: var(--color-error);
-  font-size: 12px;
+  font-size: 10px;
   text-align: start;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
@@ -83,6 +157,12 @@
 }
 .pass {
   margin-top: 8px;
+}
+
+.input:focus ~ .userTitle,
+.input:focus ~ .passTitle,
+.filled {
+  opacity: 1;
 }
 
 .forgetPass {
@@ -129,4 +209,10 @@
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   pointer-events: none;
+}
+
+@media (max-width: 1440px) {
+  .container {
+    display: none;
+  }
 }
