@@ -15,7 +15,7 @@ const App = () => {
         <Route path="confirmation" element={<LoginConfirm />} />
         <Route path="admin" element={<Admin />} />
         <Route path="selectschool" element={<SelectSchool />} />
-        <Route path="selectshift" element={<SelectShift />} />
+        <Route path="selectshift/:gender" element={<SelectShift />} />
         <Route path="*" element={<div>404</div>} />
       </Routes>
     </BrowserRouter>

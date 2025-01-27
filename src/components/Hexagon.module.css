@@ -18,7 +18,7 @@
   display: block;
   position: absolute;
   margin: auto;
-  transition: opacity 150ms;
+  transition: background-image 150ms;
 }
 
 .back {
@@ -54,8 +54,9 @@
 }
 
 .smallIcon {
-  width: 24px;
-  height: 24px;
+  transform: translate(-50%, -120%);
+  width: 1.5vw;
+  height: 1.5vw;
   z-index: 1;
 }
 

@@ -27,6 +27,7 @@
   justify-content: center;
   align-items: center;
   scale: 70%;
+  transition: background-image 150ms;
 }
 .circle:hover {
   background-image: url("/myschool/images/circle-on.svg");

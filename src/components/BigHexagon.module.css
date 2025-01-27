@@ -18,6 +18,7 @@
   display: block;
   position: absolute;
   margin: auto;
+  transition: opacity 150ms;
 }
 
 .back,
@@ -96,6 +97,7 @@
 .text {
   font-size: 20px;
   z-index: 1;
+  transition: color 150ms;
 }
 
 .container:hover .textBlue {
@@ -104,4 +106,12 @@
 
 .container:hover .textPink {
   color: #ff85ce;
+}
+
+.container:hover .textYellow {
+  color: #ffc700;
+}
+
+.container:hover .textRed {
+  color: #ff0000;
 }

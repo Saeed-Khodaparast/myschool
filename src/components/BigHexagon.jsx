@@ -1,7 +1,7 @@
 import styles from "./BigHexagon.module.css";
 
 const BigHexagon = ({
-  gender,
+  color,
   icon,
   hoverIcon,
   back,
@@ -31,9 +31,12 @@ const BigHexagon = ({
         <img className={styles.backHover} src={backHover} alt="" />
       </div>
       <span
-        className={`${styles.text} ${
-          gender === "boy" ? styles.textBlue : styles.textPink
-        }`}
+        className={`${styles.text} 
+        ${color === "blue" && styles.textBlue}
+        ${color === "pink" && styles.textPink} 
+        ${color === "yellow" && styles.textYellow}
+        ${color === "red" && styles.textRed}          
+        `}
       >
         {text}
       </span>

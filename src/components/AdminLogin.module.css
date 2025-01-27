@@ -65,7 +65,7 @@
 .passTitle {
   position: absolute;
   margin-right: 8px;
-  top: 4px;
+  top: 11px;
   right: 0;
   color: var(--color-input-placeholder);
   font-size: 12px;
@@ -73,7 +73,7 @@
   transition: opacity 0.3s ease;
 }
 .passTitle {
-  /* top: 0px; */
+  top: 6px;
 }
 
 .input::-webkit-input-placeholder {

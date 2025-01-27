@@ -1,36 +1,99 @@
 .container {
-  composes: container from "./Admin.module.css";
+  height: 100vh;
+  min-height: 713px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  align-items: center;
+  gap: 16px;
+  color: white;
+  position: relative;
+  background-image: url("/myschool/images/bg-admin.png");
+  background-position: -0.2vw -2.8vw;
 }
+
 .circle {
-  composes: circle from "./Admin.module.css";
+  width: 22vw;
+  height: 22vw;
+  background-image: url("/myschool/images/circle.svg");
+  background-position: center;
+  position: absolute;
+  top: -0.2vw;
+  left: 37.9vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  scale: 70%;
+  transition: background-image 150ms;
+}
+.circle:hover {
+  background-image: url("/myschool/images/circle-on.svg");
 }
 
 .schoolLogo {
-  composes: schoolLogo from "./Admin.module.css";
-}
-
-.hexagon {
-  composes: hexagon from "./Admin.module.css";
+  width: 84%;
+  height: 82%;
+  border-radius: 100%;
 }
 
 .title {
-  composes: title from "./Admin.module.css";
-}
-
-.bigHexagon {
-  composes: bigHexagon from "./SelectSchool.module.css";
+  width: 30vw;
+  top: 19.5vw;
+  position: absolute;
+  font-size: 1.35vw;
+  text-align: center;
+  padding: 8px 0;
+  border-radius: 50px;
+  background-color: var(--color-main-title-background);
 }
 
 .returnContainer {
-  composes: returnContainer from "./SelectSchool.module.css";
+  position: absolute;
+  left: 4.8vw;
+  top: 5.54vw;
 }
 
 .morningContainer {
-  top: calc(240px + 88px);
-  left: calc(800px - 84px);
+  position: absolute;
+  top: calc(35.33vw);
+  left: calc(63.6vw);
 }
 
 .eveningContainer {
-  top: calc(240px + 88px);
-  left: calc(160px + 24px);
+  position: absolute;
+  top: calc(35.33vw);
+  left: calc(29.1vw);
+}
+
+@media (max-height: 712px) {
+  .morningContainer {
+    top: calc(35vw);
+    left: calc(62.9vw);
+  }
+
+  .eveningContainer {
+    top: calc(35vw);
+    left: calc(28.7vw);
+  }
+}
+
+@media (max-width: 1500px) {
+  .morningContainer {
+    top: calc(35vw);
+    left: calc(62.8vw);
+  }
+
+  .eveningContainer {
+    top: calc(35vw);
+    left: calc(28.6vw);
+  }
+}
+
+@media (max-width: 1440px) {
+  .container {
+    display: none;
+  }
 }

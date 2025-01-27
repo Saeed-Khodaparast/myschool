@@ -25,14 +25,15 @@ const SelectSchool = () => {
         // transition: "opacity 0.6s ease",
       }}
     >
-      <div
-        className={`${styles.hexagon} ${styles.returnContainer}`}
-        onClick={() => navigate("/admin")}
-      >
+      <div className={styles.returnContainer}>
         <Hexagon
           icon="/myschool/images/ic-arrow-left.svg"
+          hoverIcon="/myschool/images/ic-arrow-left.svg"
+          back="/myschool/images/hexagon.svg"
+          backHover="/myschool/images/hexagon-on.svg"
           iconSize="small"
           text="بازگشت"
+          handleClick={() => navigate("/admin")}
         />
       </div>
       <div className={styles.circle}>
@@ -45,24 +46,24 @@ const SelectSchool = () => {
       <p className={styles.title}>سیستم مدیریت مدرسه غیر انتفاعی طرح نو</p>
       <div className={styles.boyContainer}>
         <BigHexagon
-          gender="boy"
+          color="blue"
           icon="/myschool/images/ic-boy.svg"
           hoverIcon="/myschool/images/ic-boy-on.svg"
           back="/myschool/images/big-hexagon.svg"
-          backHover="/myschool/images/big-hexagon-on-boy.svg"
-          handleClick={() => navigate("/selectshift")}
+          backHover="/myschool/images/big-hexagon-blue.svg"
+          handleClick={() => navigate(`/selectshift/${"boy"}`)}
           text="مدرسه پسرانه"
         />
       </div>
 
       <div className={styles.girlContainer}>
         <BigHexagon
-          gender="girl"
+          color="pink"
           icon="/myschool/images/ic-girl.svg"
           hoverIcon="/myschool/images/ic-girl-on.svg"
           back="/myschool/images/big-hexagon.svg"
-          backHover="/myschool/images/big-hexagon-on-girl.svg"
-          handleClick={() => navigate("/selectshift")}
+          backHover="/myschool/images/big-hexagon-pink.svg"
+          handleClick={() => navigate(`/selectshift/${"girl"}`)}
           text="مدرسه دخترانه"
         />
       </div>
