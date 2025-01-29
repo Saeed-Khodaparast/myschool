@@ -1,0 +1,202 @@
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.input {
+  height: 48px;
+  direction: rtl;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.432);
+  outline: none;
+  background: none;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+select.input {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("/myschool/images/ic-arrow-down.svg");
+  background-repeat: no-repeat;
+  background-position: left 16px center;
+  background-size: 16px;
+  padding-left: 40px;
+  padding-right: 16px;
+}
+select.input.open {
+  background-image: url("/myschool/images/ic-arrow-up.svg");
+}
+select::-ms-expand {
+  display: none;
+}
+.regularFont14 {
+  font-family: "iransansRegular";
+  font-size: 14px;
+  opacity: 0.5;
+}
+.regularFont16 {
+  font-family: "iransansRegular";
+  font-size: 16px;
+  background-color: aqua;
+  opacity: 0.7;
+}
+
+.header {
+  width: 100%;
+  height: 104px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  border-bottom: solid 4px #0036ff;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.432);
+}
+
+.header .title {
+  width: 100%;
+  height: 100%;
+  padding-right: 24px;
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  /* font-family: "iransansRegular"; */
+}
+.addBtn,
+.returnBtn {
+  padding: 8px 16px;
+  border: none;
+  font-size: 15px;
+  /* font-family: "iransansMedium"; */
+  transition: background-color 200ms ease-in-out;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.addBtn {
+  left: 128px;
+  background-color: #d9d9d9;
+}
+.returnBtn {
+  margin-right: 16px;
+  margin-left: 24px;
+  background: none;
+}
+.addBtn:hover {
+  color: white;
+  background-color: #00d50b;
+}
+.returnBtn:hover {
+  color: white;
+  background-color: #ff0000;
+}
+
+.body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.yearTitle {
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.yearTitle > .input {
+  margin-top: 8px;
+}
+
+.yearStatus {
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.yearStatus > .title,
+.yearStatus > .input {
+  width: 50%;
+}
+
+/* #yearStatusChoose {
+  height: 48px;
+  width: 424px;
+  position: absolute;
+  top: 131px;
+  left: 24px;
+}
+#startDate,
+#endDate {
+  position: absolute;
+  top: 187px;
+  left: 732px;
+}
+#endDate {
+  left: 290px;
+}
+.datepicker {
+  width: 424px;
+  height: 48px;
+  border-radius: 8px;
+
+  position: absolute;
+  top: 238px;
+}
+#startChoos {
+  left: 472px;
+}
+#endChoos {
+  left: 24px;
+}
+
+#startRegister,
+#endRegister {
+  position: absolute;
+  top: 294px;
+  left: 767px;
+}
+#endRegister {
+  left: 325px;
+}
+#startChoosRegister,
+#endChoosRegister {
+  position: absolute;
+  top: 345px;
+  left: 24px;
+}
+#startChoosRegister {
+  left: 472px;
+}
+
+#limit {
+  position: absolute;
+  top: 452px;
+  left: 24px;
+  width: 872px;
+  height: 48px;
+}
+#limitText {
+  position: absolute;
+  top: 400px;
+  left: 709px;
+}
+#limitInformation {
+  opacity: 0.7;
+  width: 398px;
+  position: absolute;
+  top: 510px;
+  left: 496px;
+  font-size: 12px;
+  font-family: "iransansRegular";
+}*/
+
+/* .box {
+  box-sizing: border-box;
+} */

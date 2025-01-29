@@ -57,6 +57,7 @@ const SelectShift = () => {
           back="/myschool/images/big-hexagon.svg"
           backHover="/myschool/images/big-hexagon-yellow.svg"
           text="شیفت صبح"
+          handleClick={() => navigate(`/academicyear/${gender}/${"morning"}`)}
         />
       </div>
       <div className={styles.eveningContainer}>
@@ -67,6 +68,7 @@ const SelectShift = () => {
           back="/myschool/images/big-hexagon.svg"
           backHover="/myschool/images/big-hexagon-red.svg"
           text="شیفت عصر"
+          handleClick={() => navigate(`/academicyear/${gender}/${"evening"}`)}
         />
       </div>
     </div>

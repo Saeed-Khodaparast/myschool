@@ -6,6 +6,7 @@ import Admin from "./Admin";
 import SelectSchool from "./SelectSchool";
 import SelectShift from "./SelectShift";
 import "./App.css";
+import AcademicYear from "./AcademicYear";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
         <Route path="admin" element={<Admin />} />
         <Route path="selectschool" element={<SelectSchool />} />
         <Route path="selectshift/:gender" element={<SelectShift />} />
+        <Route path="academicyear/:gender/:shift" element={<AcademicYear />} />
         <Route path="*" element={<div>404</div>} />
       </Routes>
     </BrowserRouter>
