@@ -99,7 +99,7 @@
 
 .modal {
   width: 800px;
-  height: 600px;
+  height: calc(680px - 24px);
   background-color: white;
   border-radius: 15px;
   position: absolute;

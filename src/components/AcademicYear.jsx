@@ -10,7 +10,7 @@ const AcademicYear = () => {
   const { gender, shift } = useParams();
 
   const handleAddBtn = () => {
-    // setShowModal(!showModal);
+    setShowModal(!showModal);
   };
 
   return (

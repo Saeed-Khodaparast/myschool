@@ -8,7 +8,8 @@
 }
 
 .input {
-  height: 48px;
+  width: 100%;
+  height: 44px;
   direction: rtl;
   border: none;
   border-radius: 8px;
@@ -57,13 +58,17 @@ select::-ms-expand {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.432);
 }
 
+.title {
+  font-size: 14px;
+}
+
 .header .title {
   width: 100%;
   height: 100%;
   padding-right: 24px;
   display: flex;
   align-items: center;
-  font-size: 24px;
+  font-size: 20px;
   /* font-family: "iransansRegular"; */
 }
 .addBtn,
@@ -105,13 +110,11 @@ select::-ms-expand {
 }
 
 .yearTitle {
-  padding: 0 24px;
+  padding: 8px 24px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-.yearTitle > .input {
-  margin-top: 8px;
+  gap: 8px;
 }
 
 .yearStatus {
@@ -125,14 +128,38 @@ select::-ms-expand {
   width: 50%;
 }
 
-/* #yearStatusChoose {
-  height: 48px;
-  width: 424px;
-  position: absolute;
-  top: 131px;
-  left: 24px;
+.startEndYear,
+.startEndRegister {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 16px 24px;
+  gap: 24px;
 }
-#startDate,
+
+.startDate,
+.endDate,
+.startRegister,
+.endRegister {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.registerLimit {
+  display: flex;
+  flex-direction: column;
+  padding: 16px 24px 0 24px;
+  gap: 8px;
+}
+
+.registerLimit .information {
+  font-size: 12px;
+  color: #666666;
+}
+
+/* #startDate,
 #endDate {
   position: absolute;
   top: 187px;
@@ -199,4 +226,37 @@ select::-ms-expand {
 
 /* .box {
   box-sizing: border-box;
+} */
+
+/* Add these to your Modal.module.css */
+/* :global(.rmdp-container) {
+  width: 100%;
+}
+
+:global(.rmdp-input) {
+  height: 44px;
+  width: 100%;
+  direction: rtl;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.432);
+  outline: none;
+  background: none;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+
+:global(.rmdp-calendar) {
+  padding: 4px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.432);
+}
+
+:global(.rmdp-day.rmdp-selected span) {
+  background-color: #0036ff;
+}
+
+:global(.rmdp-arrow-container:hover) {
+  background-color: #0036ff;
+  box-shadow: 0 0 3px #0036ff;
 } */
