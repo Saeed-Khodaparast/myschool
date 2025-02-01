@@ -262,7 +262,7 @@ const AcademicYear = () => {
                   ))}
                 </ul>
                 <img
-                  className={styles.addBtn}
+                  className={styles.roundAddBtn}
                   src="/myschool/images/ic-add-academic-year.svg"
                   alt=""
                   onClick={handleAddBtn}
