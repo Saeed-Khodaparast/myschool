@@ -5,7 +5,7 @@ import persian_fa from "react-date-object/locales/persian_fa";
 import styles from "./Modal.module.css";
 import { DateObject } from "react-multi-date-picker";
 
-const Modal = ({ handleReturnClick }) => {
+const Modal = ({ items, setItems, handleReturnClick }) => {
   const [isSelectOpen, setIsSelectOpen] = useState(false);
   const [startDate, setStartDate] = useState(
     new DateObject({ calendar: persian, locale: persian_fa })
@@ -20,8 +20,9 @@ const Modal = ({ handleReturnClick }) => {
     new DateObject({ calendar: persian, locale: persian_fa })
   );
   const [yearTitle, setYearTitle] = useState("");
+  const [yearStatus, setYearStatus] = useState("");
   const [registrationLimit, setRegistrationLimit] = useState("");
-  const [yearStatus, setYearStatus] = useState("option1");
+  const [registered, setRegistered] = useState(0);
 
   const resetModal = () => {
     setIsSelectOpen(false);
@@ -37,7 +38,8 @@ const Modal = ({ handleReturnClick }) => {
     );
     setYearTitle("");
     setRegistrationLimit("");
-    setYearStatus("option1");
+    setYearStatus("");
+    setRegistered(0);
   };
 
   const CustomInput = ({ openCalendar, value, handleValueChange }) => {
@@ -60,17 +62,29 @@ const Modal = ({ handleReturnClick }) => {
   const handleSubmit = () => {
     // Convert dates to the format you need
     const formData = {
+      id: items.length + 1,
+      title: yearTitle,
+      status: yearStatus,
       startDate: startDate?.format("YYYY/MM/DD"),
       endDate: endDate?.format("YYYY/MM/DD"),
-      startDateMillis: startDate?.unix * 1000,
-      endDateMillis: endDate?.unix * 1000,
       registerStartDate: registerStartDate?.format("YYYY/MM/DD"),
       registerEndDate: registerEndDate?.format("YYYY/MM/DD"),
-      registerStartDateMillis: registerStartDate?.unix * 1000,
-      registerEndDateMillis: registerEndDate?.unix * 1000,
+      registrationLimit: registrationLimit,
+      registered: "0",
+      remainRegister: registrationLimit - Number(registered),
+      createdAt: new DateObject({
+        calendar: persian,
+        locale: persian_fa,
+      }).format("YYYY/MM/DD"),
+      updatedAt: new DateObject({
+        calendar: persian,
+        locale: persian_fa,
+      }).format("YYYY/MM/DD"),
+      actions: "actions",
     };
 
     console.log(formData);
+    setItems([...items, formData]);
     handleReturn();
   };
 
@@ -128,10 +142,10 @@ const Modal = ({ handleReturnClick }) => {
             value={yearStatus}
             onChange={(e) => setYearStatus(e.target.value)}
           >
-            <option value="option1">انتخاب کنید</option>
-            <option value="option2">آیتم</option>
-            <option value="option3">آیتم</option>
-            <option value="option4">آیتم</option>
+            <option value="">انتخاب کنید</option>
+            <option value="فعال">فعال</option>
+            <option value="غیرفعال">غیرفعال</option>
+            <option value="در حال بررسی">در حال بررسی</option>
           </select>
         </div>
 

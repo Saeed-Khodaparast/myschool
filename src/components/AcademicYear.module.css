@@ -25,6 +25,7 @@
   min-height: 713px;
   background-color: white;
   display: flex;
+  overflow: hidden;
 }
 
 .sideBar {
@@ -37,6 +38,7 @@
   justify-content: top;
   align-items: end;
   position: relative;
+  color: white;
 }
 .sideBar:hover {
   width: 280px;
@@ -55,23 +57,31 @@
 
 .content {
   width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+.emptyState {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: center;
   gap: 24px;
 }
-
-.image {
+.emptyState .image {
   width: 800px;
 }
-
-.title {
+.emptyState .title {
   margin-top: 24px;
   font-size: 20px;
 }
-
-.addBtn {
+.emptyState .addBtn {
   width: 189px;
   height: 56px;
   font-size: 16px;
@@ -79,6 +89,125 @@
   border: none;
   border-radius: 10px;
   cursor: pointer;
+}
+
+.content .container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  gap: 16px;
+}
+.header .title {
+  width: 100%;
+  padding: 12px 24px;
+  font-size: 22px;
+}
+.filter {
+  width: 60px;
+  height: 60px;
+  padding: 16px;
+  border-radius: 50%;
+  background-color: var(--color-sidebar-background);
+  box-shadow: 0px 1px 6px 0px #00000044;
+  cursor: pointer;
+}
+
+.inputContainer {
+  position: relative;
+}
+.searchIcon {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.searchInput {
+  width: 500px;
+  height: 56px;
+  padding: 0 24px;
+  border-radius: 50px;
+  box-shadow: 0px 1px 6px 0px #00000044;
+  border: none;
+  text-align: center;
+}
+.searchInput:focus {
+  outline: none;
+}
+
+.list {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-x: auto;
+  position: relative;
+}
+.labels,
+.items {
+  width: fit-content;
+  list-style: none;
+  overflow-y: auto;
+}
+.labels {
+  min-height: 80px;
+  margin: 0px 16px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  background-color: var(--color-sidebar-background);
+  border: 2px solid var(--color-sidebar-background);
+  color: white;
+}
+.items {
+  height: 100%;
+  margin: 16px 16px;
+  background-color: white;
+  color: black;
+}
+.label {
+  min-width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.item {
+  height: 72px;
+  display: flex;
+  border: 2px solid #d7d7d7;
+  border-radius: 15px;
+  margin-bottom: 8px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.item:hover {
+  background-color: #f9f9f9;
+}
+.subItem {
+  min-width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.addBtn {
+  width: 56px;
+  height: 56px;
+  left: 40px;
+  bottom: 56px;
+  position: fixed;
+  padding: 16px;
+  border-radius: 50%;
+  background-color: var(--color-sidebar-background);
+  box-shadow: 2px 2px 6px 2px #00000044;
+  cursor: pointer;
+  z-index: 1000;
 }
 
 .dimBackground {
