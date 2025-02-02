@@ -25,11 +25,33 @@
   height: 5vw;
   padding: 8px;
 }
+.topImage.error {
+  width: 8vw;
+  height: 8vw;
+  margin-bottom: 16px;
+}
 
 .title {
   font-weight: 700;
   font-size: 17px;
   margin-top: 8px;
+}
+
+.error {
+  color: red;
+  font-weight: 300;
+  font-size: 18px;
+}
+.errorDescription {
+  width: 328px;
+  margin-top: 16px;
+  margin-bottom: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 15px;
+  color: var(--color-text-secondary);
 }
 
 .form {
@@ -61,8 +83,8 @@
   outline: none;
 }
 
-.userTitle,
-.passTitle {
+.nationalCodeTitle,
+.birthDateTitle {
   position: absolute;
   margin-right: 8px;
   top: 11px;
@@ -72,7 +94,7 @@
   opacity: 0;
   transition: opacity 0.3s ease;
 }
-.passTitle {
+.birthDateTitle {
   top: 6px;
 }
 

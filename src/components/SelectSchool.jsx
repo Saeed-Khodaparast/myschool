@@ -49,8 +49,8 @@ const SelectSchool = () => {
           color="blue"
           icon="/myschool/images/ic-boy.svg"
           hoverIcon="/myschool/images/ic-boy-on.svg"
-          back="/myschool/images/big-hexagon.svg"
-          backHover="/myschool/images/big-hexagon-blue.svg"
+          back="/myschool/images/big-hexagon-inner.svg"
+          backHover="/myschool/images/big-hexagon-blue-inner.svg"
           handleClick={() => navigate(`/selectshift/${"boy"}`)}
           text="مدرسه پسرانه"
         />
@@ -61,8 +61,8 @@ const SelectSchool = () => {
           color="pink"
           icon="/myschool/images/ic-girl.svg"
           hoverIcon="/myschool/images/ic-girl-on.svg"
-          back="/myschool/images/big-hexagon.svg"
-          backHover="/myschool/images/big-hexagon-pink.svg"
+          back="/myschool/images/big-hexagon-inner.svg"
+          backHover="/myschool/images/big-hexagon-pink-inner.svg"
           handleClick={() => navigate(`/selectshift/${"girl"}`)}
           text="مدرسه دخترانه"
         />

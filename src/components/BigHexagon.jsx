@@ -28,7 +28,16 @@ const BigHexagon = ({
           alt=""
         />
         <img className={styles.back} src={back} alt="" />
-        <img className={styles.backHover} src={backHover} alt="" />
+        <img
+          className={`${styles.backHover}
+          ${color === "blue" && styles.backHoverBlue}
+          ${color === "pink" && styles.backHoverPink} 
+          ${color === "yellow" && styles.backHoverYellow}
+          ${color === "red" && styles.backHoverRed}  
+          `}
+          src={backHover}
+          alt=""
+        />
       </div>
       <span
         className={`${styles.text} 

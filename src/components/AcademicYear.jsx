@@ -254,7 +254,11 @@ const AcademicYear = () => {
                   {items.map((item, index) => (
                     <li className={styles.item} key={index}>
                       {Object.entries(item).map(([key, value]) => (
-                        <li className={styles.subItem} key={key}>
+                        <li
+                          className={styles.subItem}
+                          key={key}
+                          onClick={() => navigate("level")}
+                        >
                           {value}
                         </li>
                       ))}
@@ -273,6 +277,7 @@ const AcademicYear = () => {
 
           <div className={`${styles.modal} ${showModal && styles.open}`}>
             <Modal
+              type="year"
               items={items}
               setItems={setItems}
               handleReturnClick={handleAddBtn}

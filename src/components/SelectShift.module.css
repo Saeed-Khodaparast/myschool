@@ -58,14 +58,14 @@
 
 .morningContainer {
   position: absolute;
-  top: calc(35.33vw);
+  top: calc(35.4vw);
   left: calc(63.6vw);
 }
 
 .eveningContainer {
   position: absolute;
-  top: calc(35.33vw);
-  left: calc(29.1vw);
+  top: calc(35.5vw);
+  left: calc(29.2vw);
 }
 
 @media (max-height: 712px) {

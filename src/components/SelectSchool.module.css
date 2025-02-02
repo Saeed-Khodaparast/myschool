@@ -58,13 +58,13 @@
 
 .boyContainer {
   position: absolute;
-  top: calc(35.33vw);
-  left: calc(63.1vw);
+  top: calc(35.4vw);
+  left: calc(63.09vw);
 }
 
 .girlContainer {
   position: absolute;
-  top: calc(35.33vw);
+  top: calc(35.5vw);
   left: calc(28.32vw);
 }
 

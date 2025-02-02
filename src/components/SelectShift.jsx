@@ -54,8 +54,8 @@ const SelectShift = () => {
           color="yellow"
           icon="/myschool/images/ic-sun.svg"
           hoverIcon="/myschool/images/ic-sun-yellow.svg"
-          back="/myschool/images/big-hexagon.svg"
-          backHover="/myschool/images/big-hexagon-yellow.svg"
+          back="/myschool/images/big-hexagon-inner.svg"
+          backHover="/myschool/images/big-hexagon-yellow-inner.svg"
           text="شیفت صبح"
           handleClick={() => navigate(`/academicyear/${gender}/${"morning"}`)}
         />
@@ -65,8 +65,8 @@ const SelectShift = () => {
           color="red"
           icon="/myschool/images/ic-sun.svg"
           hoverIcon="/myschool/images/ic-sun-red.svg"
-          back="/myschool/images/big-hexagon.svg"
-          backHover="/myschool/images/big-hexagon-red.svg"
+          back="/myschool/images/big-hexagon-inner.svg"
+          backHover="/myschool/images/big-hexagon-red-inner.svg"
           text="شیفت عصر"
           handleClick={() => navigate(`/academicyear/${gender}/${"evening"}`)}
         />

@@ -4,7 +4,7 @@ import VerificationInput from "./VerificationInput";
 import ResendTimer from "./ResendTimer";
 import { useNavigate } from "react-router-dom";
 
-const LoginConfirm = () => {
+const LoginConfirm = ({ handleReturn }) => {
   const [inputValue, setInputValue] = useState("");
   const inputRefs = useRef([]);
   const [isBackgroundLoaded, setIsBackgroundLoaded] = useState(false);
@@ -18,10 +18,6 @@ const LoginConfirm = () => {
       setIsBackgroundLoaded(true);
     };
   }, []);
-
-  const handleReturn = () => {
-    navigate("/");
-  };
 
   const handleInputChange = (e) => {
     setInputValue(e.target.value);

@@ -23,10 +23,35 @@
 
 .back,
 .backHover {
+  max-width: 29.5vw;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.back {
+  filter: drop-shadow(0 0 8px rgba(0, 0, 0, 1))
+    drop-shadow(1px 2px 7px rgba(255, 255, 255, 0.1));
+}
+.backHoverBlue {
+  filter: drop-shadow(0 0 10px rgba(0, 54, 255, 0.8))
+    drop-shadow(0 0 30px rgba(0, 54, 255, 0.4))
+    drop-shadow(1px 2px 4px rgba(255, 255, 255, 0.1));
+}
+.backHoverPink {
+  filter: drop-shadow(0 0 10px rgba(255, 0, 153, 0.8))
+    drop-shadow(0 0 30px rgba(255, 0, 153, 0.4))
+    drop-shadow(1px 2px 4px rgba(255, 255, 255, 0.1));
+}
+.backHoverYellow {
+  filter: drop-shadow(0 0 10px rgba(238, 255, 0, 0.8))
+    drop-shadow(0 0 30px rgba(238, 255, 0, 0.4))
+    drop-shadow(1px 2px 4px rgba(255, 255, 255, 0.1));
+}
+.backHoverRed {
+  filter: drop-shadow(0 0 10px rgba(255, 0, 0, 0.8))
+    drop-shadow(0 0 30px rgba(255, 0, 0, 0.4))
+    drop-shadow(1px 2px 4px rgba(255, 255, 255, 0.1));
 }
 
 .icon,

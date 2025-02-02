@@ -129,6 +129,7 @@ const Admin = () => {
           back="/myschool/images/hexagon.svg"
           backHover="/myschool/images/hexagon-on.svg"
           text="پروفایل مدرسه"
+          handleClick={() => navigate("/schoolregister")}
         />
       </div>
       <div className={styles.setsContainer}>
