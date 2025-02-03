@@ -48,6 +48,17 @@
   color: var(--color-primary);
 }
 
+.editPhoneNumber {
+  font-size: 10px;
+  align-self: flex-end;
+  cursor: pointer;
+  z-index: 1;
+  color: #a6a6a6;
+}
+.editPhoneNumber:hover {
+  color: var(--color-primary);
+}
+
 .verificationInput {
   margin-top: 80px;
 }
@@ -55,7 +66,7 @@
 .button {
   width: 118px;
   height: 44px;
-  margin-top: 48px;
+  margin-top: 32px;
   border-radius: 5px;
   background: linear-gradient(
     180deg,

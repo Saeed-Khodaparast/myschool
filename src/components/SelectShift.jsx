@@ -6,15 +6,57 @@ import { useState, useEffect } from "react";
 
 const SelectShift = () => {
   const [isBackgroundLoaded, setIsBackgroundLoaded] = useState(false);
+  const [isHexagonLoaded, setIsHexagonLoaded] = useState(false);
+  const [isCircleLoaded, setIsCircleLoaded] = useState(false);
+  const [isCircleHoverLoaded, setIsCircleHoverLoaded] = useState(false);
+  const [isBigHexagonLoaded, setIsBigHexagonLoaded] = useState(false);
+  const [isBigHexagonYellowLoaded, setIsBigHexagonYellowLoaded] =
+    useState(false);
+  const [isBigHexagonRedLoaded, setIsBigHexagonRedLoaded] = useState(false);
   const { gender } = useParams();
   const navigate = useNavigate();
 
   // Add useEffect to handle background loading
   useEffect(() => {
-    const img = new Image();
-    img.src = "/myschool/images/bg-admin.png"; // Replace with your actual background image URL
-    img.onload = () => {
+    const backgroundImage = new Image();
+    const circleImage = new Image();
+    const circleHoverImage = new Image();
+    const hexagonImage = new Image();
+    const hexagonHoverImage = new Image();
+    const bigHexagonImage = new Image();
+    const bigHexagonYellowImage = new Image();
+    const bigHexagonRedImage = new Image();
+    backgroundImage.src = "/myschool/images/bg-admin.png";
+    circleImage.src = "/myschool/images/circle.svg";
+    circleHoverImage.src = "/myschool/images/circle-on.svg";
+    hexagonImage.src = "/myschool/images/hexagon.svg";
+    hexagonHoverImage.src = "/myschool/images/hexagon-on.svg";
+    bigHexagonImage.src = "/myschool/images/big-hexagon.svg";
+    bigHexagonYellowImage.src = "/myschool/images/big-hexagon-yellow.svg";
+    bigHexagonRedImage.src = "/myschool/images/big-hexagon-red.svg";
+    backgroundImage.onload = () => {
       setIsBackgroundLoaded(true);
+    };
+    circleImage.onload = () => {
+      setIsCircleLoaded(true);
+    };
+    circleHoverImage.onload = () => {
+      setIsCircleHoverLoaded(true);
+    };
+    hexagonImage.onload = () => {
+      setIsHexagonLoaded(true);
+    };
+    hexagonHoverImage.onload = () => {
+      setIsHexagonLoaded(true);
+    };
+    bigHexagonImage.onload = () => {
+      setIsBigHexagonLoaded(true);
+    };
+    bigHexagonYellowImage.onload = () => {
+      setIsBigHexagonYellowLoaded(true);
+    };
+    bigHexagonRedImage.onload = () => {
+      setIsBigHexagonRedLoaded(true);
     };
   }, []);
 
@@ -22,7 +64,16 @@ const SelectShift = () => {
     <div
       className={styles.container}
       style={{
-        opacity: isBackgroundLoaded ? 1 : 0,
+        opacity:
+          isBackgroundLoaded &&
+          isHexagonLoaded &&
+          isCircleLoaded &&
+          isCircleHoverLoaded &&
+          isBigHexagonLoaded &&
+          isBigHexagonYellowLoaded &&
+          isBigHexagonRedLoaded
+            ? 1
+            : 0,
         // transition: "opacity 0.6s ease",
       }}
     >
@@ -54,8 +105,8 @@ const SelectShift = () => {
           color="yellow"
           icon="/myschool/images/ic-sun.svg"
           hoverIcon="/myschool/images/ic-sun-yellow.svg"
-          back="/myschool/images/big-hexagon-inner.svg"
-          backHover="/myschool/images/big-hexagon-yellow-inner.svg"
+          back="/myschool/images/big-hexagon.svg"
+          backHover="/myschool/images/big-hexagon-yellow.svg"
           text="شیفت صبح"
           handleClick={() => navigate(`/academicyear/${gender}/${"morning"}`)}
         />
@@ -65,8 +116,8 @@ const SelectShift = () => {
           color="red"
           icon="/myschool/images/ic-sun.svg"
           hoverIcon="/myschool/images/ic-sun-red.svg"
-          back="/myschool/images/big-hexagon-inner.svg"
-          backHover="/myschool/images/big-hexagon-red-inner.svg"
+          back="/myschool/images/big-hexagon.svg"
+          backHover="/myschool/images/big-hexagon-red.svg"
           text="شیفت عصر"
           handleClick={() => navigate(`/academicyear/${gender}/${"evening"}`)}
         />

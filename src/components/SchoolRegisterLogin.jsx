@@ -17,14 +17,38 @@ const SchoolRegisterLogin = () => {
   const [userError, setUserError] = useState(true);
   const [isVisible, setIsVisible] = useState(false);
   const [isBackgroundLoaded, setIsBackgroundLoaded] = useState(false);
+  const [isLogoLoaded, setIsLogoLoaded] = useState(false);
+  const [isLoginIconLoaded, setIsLoginIconLoaded] = useState(false);
+  const [isNoUserIconLoaded, setIsNoUserIconLoaded] = useState(false);
+  const [isAgeIconLoaded, setIsAgeIconLoaded] = useState(false);
   const navigate = useNavigate();
 
   // Add useEffect to handle background loading
   useEffect(() => {
-    const img = new Image();
-    img.src = "/myschool/images/bg-login.png"; // Replace with your actual background image URL
-    img.onload = () => {
+    const backgroundImage = new Image();
+    const logoImage = new Image();
+    const loginIconImage = new Image();
+    const noUserIconImage = new Image();
+    const ageIconImage = new Image();
+    backgroundImage.src = "/myschool/images/bg-login.png";
+    logoImage.src = "/myschool/images/logo.svg";
+    loginIconImage.src = "/myschool/images/ic-login.svg";
+    noUserIconImage.src = "/myschool/images/ic-error-nouser.svg";
+    ageIconImage.src = "/myschool/images/ic-error-age.svg";
+    backgroundImage.onload = () => {
       setIsBackgroundLoaded(true);
+    };
+    logoImage.onload = () => {
+      setIsLogoLoaded(true);
+    };
+    loginIconImage.onload = () => {
+      setIsLoginIconLoaded(true);
+    };
+    noUserIconImage.onload = () => {
+      setIsNoUserIconLoaded(true);
+    };
+    ageIconImage.onload = () => {
+      setIsAgeIconLoaded(true);
     };
   }, []);
 
@@ -111,7 +135,14 @@ const SchoolRegisterLogin = () => {
         <div
           className={styles.container}
           style={{
-            opacity: isBackgroundLoaded ? 1 : 0,
+            opacity:
+              isBackgroundLoaded &&
+              isLogoLoaded &&
+              isLoginIconLoaded &&
+              isNoUserIconLoaded &&
+              isAgeIconLoaded
+                ? 1
+                : 0,
           }}
         >
           <img className={styles.logo} src="/myschool/images/logo.svg" alt="" />

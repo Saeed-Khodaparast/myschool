@@ -8,14 +8,26 @@ const LoginConfirm = ({ handleReturn }) => {
   const [inputValue, setInputValue] = useState("");
   const inputRefs = useRef([]);
   const [isBackgroundLoaded, setIsBackgroundLoaded] = useState(false);
+  const [isLogoLoaded, setIsLogoLoaded] = useState(false);
+  const [isTopIconLoaded, setIsTopIconLoaded] = useState(false);
   const navigate = useNavigate();
 
   // Add useEffect to handle background loading
   useEffect(() => {
-    const img = new Image();
-    img.src = "/myschool/images/bg-login.png"; // Replace with your actual background image URL
-    img.onload = () => {
+    const backgroundImage = new Image();
+    const logoImage = new Image();
+    const topIconImage = new Image();
+    backgroundImage.src = "/myschool/images/bg-login.png";
+    logoImage.src = "/myschool/images/logo.svg";
+    topIconImage.src = "/myschool/images/ic-loginConfirm.svg";
+    backgroundImage.onload = () => {
       setIsBackgroundLoaded(true);
+    };
+    logoImage.onload = () => {
+      setIsLogoLoaded(true);
+    };
+    topIconImage.onload = () => {
+      setIsTopIconLoaded(true);
     };
   }, []);
 
@@ -73,7 +85,7 @@ const LoginConfirm = ({ handleReturn }) => {
     <div
       className={styles.container}
       style={{
-        opacity: isBackgroundLoaded ? 1 : 0,
+        opacity: isBackgroundLoaded && isLogoLoaded && isTopIconLoaded ? 1 : 0,
         // transition: "opacity 0.6s ease",
       }}
     >
@@ -89,6 +101,7 @@ const LoginConfirm = ({ handleReturn }) => {
           <span className={styles.phoneNumber}>09198863479</span>
           ارسال کرده ایم.
         </p>
+        <span className={styles.editPhoneNumber}>ویرایش شماره موبایل</span>
         <VerificationInput />
         <ResendTimer
           initialTime={10}

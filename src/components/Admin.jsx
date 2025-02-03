@@ -5,8 +5,11 @@ import Hexagon from "./Hexagon";
 import UserHexagon from "./UserHexagon";
 
 const Admin = () => {
-  const navigate = useNavigate();
   const [isBackgroundLoaded, setIsBackgroundLoaded] = useState(false);
+  const [isHexagonLoaded, setIsHexagonLoaded] = useState(false);
+  const [isCircleLoaded, setIsCircleLoaded] = useState(false);
+  const [isCircleHoverLoaded, setIsCircleHoverLoaded] = useState(false);
+  const navigate = useNavigate();
 
   const handleEditClick = () => {
     document.getElementById("logo-picker").click();
@@ -30,10 +33,30 @@ const Admin = () => {
 
   // Add useEffect to handle background loading
   useEffect(() => {
-    const img = new Image();
-    img.src = "/myschool/images/bg-admin.png"; // Replace with your actual background image URL
-    img.onload = () => {
+    const backgroundImage = new Image();
+    const circleImage = new Image();
+    const circleHoverImage = new Image();
+    const hexagonImage = new Image();
+    const hexagonHoverImage = new Image();
+    backgroundImage.src = "/myschool/images/bg-admin.png";
+    circleImage.src = "/myschool/images/circle.svg";
+    circleHoverImage.src = "/myschool/images/circle-on.svg";
+    hexagonImage.src = "/myschool/images/hexagon.svg";
+    hexagonHoverImage.src = "/myschool/images/hexagon-on.svg";
+    backgroundImage.onload = () => {
       setIsBackgroundLoaded(true);
+    };
+    circleImage.onload = () => {
+      setIsCircleLoaded(true);
+    };
+    circleHoverImage.onload = () => {
+      setIsCircleHoverLoaded(true);
+    };
+    hexagonImage.onload = () => {
+      setIsHexagonLoaded(true);
+    };
+    hexagonHoverImage.onload = () => {
+      setIsHexagonLoaded(true);
     };
   }, []);
 
@@ -41,7 +64,13 @@ const Admin = () => {
     <div
       className={styles.container}
       style={{
-        opacity: isBackgroundLoaded ? 1 : 0,
+        opacity:
+          isBackgroundLoaded &&
+          isHexagonLoaded &&
+          isCircleLoaded &&
+          isCircleHoverLoaded
+            ? 1
+            : 0,
         // transition: "opacity 0.6s ease",
       }}
     >

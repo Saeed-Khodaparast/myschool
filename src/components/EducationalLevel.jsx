@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import styles from "./EducationalLevel.module.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Modal from "./Modal";
 
 // const sampleData = [
@@ -160,6 +160,7 @@ import Modal from "./Modal";
 const EducationalLevel = () => {
   const [showModal, setShowModal] = useState(false);
   const [items, setItems] = useState([]);
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
   const navigate = useNavigate();
   const { gender, shift, level } = useParams();
 
@@ -175,6 +176,15 @@ const EducationalLevel = () => {
     "عملیات",
   ];
 
+  // Add useEffect to handle background loading
+  useEffect(() => {
+    const image = new Image();
+    image.src = "/myschool/images/school.svg";
+    image.onload = () => {
+      setIsImageLoaded(true);
+    };
+  }, []);
+
   const handleAddBtn = () => {
     setShowModal(!showModal);
   };
@@ -185,7 +195,10 @@ const EducationalLevel = () => {
         className={`${styles.dimBackground} ${showModal && styles.open}`}
         onClick={handleAddBtn}
       ></div>
-      <div className={styles.container}>
+      <div
+        className={styles.container}
+        style={{ opacity: isImageLoaded ? 1 : 0 }}
+      >
         <div className={styles.sideBar}>
           <img
             className={styles.returnBtn}
