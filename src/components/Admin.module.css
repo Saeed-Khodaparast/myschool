@@ -221,6 +221,123 @@
 }
 
 @media (max-width: 1440px) {
+}
+
+@media (max-width: 1400px) {
+  .exitContainer {
+    left: 5.1vw;
+    top: 5.5vw;
+  }
+
+  .userContainer {
+    right: 5.3vw;
+    top: 1.3vw;
+  }
+
+  .notifContainer {
+    right: 5.8vw;
+    top: 15.4vw;
+  }
+
+  .walContainer {
+    right: 5.8vw;
+    top: 25.3vw;
+  }
+
+  .ayContainer {
+    left: 63.9vw;
+    top: 30.3vw;
+  }
+
+  .miContainer {
+    left: 29.7vw;
+    top: 30.3vw;
+  }
+
+  .spContainer {
+    left: 46.6vw;
+    top: 30.35vw;
+  }
+
+  .setsContainer {
+    left: 21.64vw;
+    top: 45.1vw;
+  }
+
+  .supContainer {
+    left: 38.9vw;
+    top: 45.1vw;
+  }
+
+  .repContainer {
+    left: 56.1vw;
+    top: 45.1vw;
+  }
+
+  .optContainer {
+    left: 73.7vw;
+    top: 45vw;
+  }
+}
+
+@media (max-width: 1280px) {
+  .exitContainer {
+    left: 5.1vw;
+    top: 5.5vw;
+  }
+
+  .userContainer {
+    right: 5.3vw;
+    top: 1.3vw;
+  }
+
+  .notifContainer {
+    right: 5.8vw;
+    top: 15.4vw;
+  }
+
+  .walContainer {
+    right: 5.8vw;
+    top: 25.3vw;
+  }
+
+  .ayContainer {
+    left: 63.9vw;
+    top: 30.3vw;
+  }
+
+  .miContainer {
+    left: 29.7vw;
+    top: 30.3vw;
+  }
+
+  .spContainer {
+    left: 46.6vw;
+    top: 30.35vw;
+  }
+
+  .setsContainer {
+    left: 21.64vw;
+    top: 45.1vw;
+  }
+
+  .supContainer {
+    left: 38.9vw;
+    top: 45.1vw;
+  }
+
+  .repContainer {
+    left: 56.1vw;
+    top: 45.1vw;
+  }
+
+  .optContainer {
+    left: 75.5vw;
+    top: 46.3vw;
+  }
+}
+
+@media (max-width: 1200px) {
   .container {
     display: none;
   }

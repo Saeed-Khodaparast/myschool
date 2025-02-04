@@ -45,3 +45,10 @@
   /* Disabled state */
   box-shadow: none;
 }
+
+@media (max-width: 1440px) {
+  .resendTimer,
+  .resendBtn {
+    margin-top: -16px;
+  }
+}

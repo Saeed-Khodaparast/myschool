@@ -213,6 +213,33 @@
 
 @media (max-width: 1440px) {
   .container {
+    gap: 0px;
+  }
+
+  .logo {
+    width: 20vw;
+    top: calc(160px + 8px);
+  }
+
+  .title {
+    font-size: 15px;
+  }
+
+  .form {
+    gap: 0;
+  }
+
+  .forgetPass {
+    margin-top: 4px;
+  }
+
+  .button {
+    width: calc(118px - 24px);
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
     display: none;
   }
 }
