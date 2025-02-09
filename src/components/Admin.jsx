@@ -37,18 +37,45 @@ const Admin = () => {
 
   // handle background loading
   useEffect(() => {
-    const backgroundImage = new Image();
+    let background1 = false;
+    let background2 = false;
+    let background3 = false;
+    let background4 = false;
+    const backgroundImage1 = new Image();
+    const backgroundImage2 = new Image();
+    const backgroundImage3 = new Image();
+    const backgroundImage4 = new Image();
     const circleImage = new Image();
     const circleHoverImage = new Image();
     const hexagonImage = new Image();
     const hexagonHoverImage = new Image();
-    backgroundImage.src = "/myschool/images/bg-admin.png";
+    backgroundImage1.src = "/myschool/images/bg-admin-16-9.png";
+    backgroundImage2.src = "/myschool/images/bg-admin-16-10.png";
+    backgroundImage3.src = "/myschool/images/bg-admin-3-2.png";
+    backgroundImage4.src = "/myschool/images/bg-admin-43-20.png";
     circleImage.src = "/myschool/images/circle.svg";
     circleHoverImage.src = "/myschool/images/circle-on.svg";
     hexagonImage.src = "/myschool/images/hexagon.svg";
     hexagonHoverImage.src = "/myschool/images/hexagon-on.svg";
-    backgroundImage.onload = () => {
-      setIsBackgroundLoaded(true);
+    backgroundImage1.onload = () => {
+      background1 = true;
+      if (background1 && background2 && background3 && background4)
+        setIsBackgroundLoaded(true);
+    };
+    backgroundImage2.onload = () => {
+      background2 = true;
+      if (background1 && background2 && background3 && background4)
+        setIsBackgroundLoaded(true);
+    };
+    backgroundImage3.onload = () => {
+      background3 = true;
+      if (background1 && background2 && background3 && background4)
+        setIsBackgroundLoaded(true);
+    };
+    backgroundImage4.onload = () => {
+      background4 = true;
+      if (background1 && background2 && background3 && background4)
+        setIsBackgroundLoaded(true);
     };
     circleImage.onload = () => {
       setIsCircleLoaded(true);
