@@ -46,8 +46,8 @@
 }
 
 .imageWrapper {
-  width: 56px;
-  height: 56px;
+  width: 3.5vw;
+  height: 3.5vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -65,21 +65,46 @@
   border-radius: 100%;
   z-index: 1;
   position: absolute;
-  top: 16px;
+  top: 1.4vw;
 }
 
 .badge {
-  width: 8px;
-  height: 8px;
-  border-radius: 50px;
+  width: 0.6vw;
+  height: 0.6vw;
+  border-radius: 20vw;
+  border: 0.1vw var(--color-sidebar-background) solid;
   z-index: 1;
   position: absolute;
-  top: 60px;
-  left: 4px;
+  top: 4.2vw;
+  left: 0.3vw;
 }
 
 .text {
   font-size: 0.8vw;
-  margin-top: 16px;
+  margin-top: 0.9vw;
   z-index: 1;
+}
+
+@media (max-aspect-ratio: 4/3) {
+  .container {
+    gap: 1.3vw;
+  }
+
+  .back {
+    width: 14vw;
+  }
+
+  .backHover {
+    width: 14.5vw;
+  }
+
+  .badge {
+    width: 0.8vw;
+    height: 0.8vw;
+  }
+
+  .text {
+    font-size: 0.9vw;
+    margin-top: 0.3vw;
+  }
 }

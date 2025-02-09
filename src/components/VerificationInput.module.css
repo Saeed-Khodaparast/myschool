@@ -1,4 +1,5 @@
 .container {
+  width: 100%;
   display: flex;
   gap: 8px;
   margin: 8px 0 12px 0;
@@ -17,4 +18,11 @@
   text-align: center;
   color: white;
   z-index: 1;
+}
+
+@media (max-width: 1440px) {
+  .input {
+    width: 44px;
+    height: 44px;
+  }
 }

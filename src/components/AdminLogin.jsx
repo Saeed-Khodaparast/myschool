@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import styles from "./AdminLogin.module.css";
+import { LoadingContext } from "./LoadingContext";
 
 const AdminLogin = () => {
   const [user, setUser] = useState("");
@@ -11,10 +12,24 @@ const AdminLogin = () => {
   const [isBackgroundLoaded, setIsBackgroundLoaded] = useState(false);
   const [isLogoLoaded, setIsLogoLoaded] = useState(false);
   const [isTopIconLoaded, setIsTopIconLoaded] = useState(false);
+  const { isLoading, setIsLoading } = useContext(LoadingContext);
   const navigate = useNavigate();
 
   const USER_NAME = "admin";
   const PASSWORD = "admin";
+
+  // check when all images are loaded
+  useEffect(() => {
+    const allImagesLoaded =
+      isBackgroundLoaded && isLogoLoaded && isTopIconLoaded;
+
+    if (allImagesLoaded) {
+      // Add a small delay to ensure the opacity transition is complete
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 600); // matches your opacity transition duration
+    }
+  }, [isBackgroundLoaded, isLogoLoaded, isTopIconLoaded, setIsLoading]);
 
   // Add useEffect to handle background loading
   useEffect(() => {

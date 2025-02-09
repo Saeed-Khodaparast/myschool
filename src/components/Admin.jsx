@@ -1,37 +1,41 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./Admin.module.css";
 import Hexagon from "./Hexagon";
 import UserHexagon from "./UserHexagon";
+import { LoadingContext } from "./LoadingContext";
 
 const Admin = () => {
   const [isBackgroundLoaded, setIsBackgroundLoaded] = useState(false);
   const [isHexagonLoaded, setIsHexagonLoaded] = useState(false);
   const [isCircleLoaded, setIsCircleLoaded] = useState(false);
   const [isCircleHoverLoaded, setIsCircleHoverLoaded] = useState(false);
+  const { isLoading, setIsLoading } = useContext(LoadingContext);
   const navigate = useNavigate();
 
-  const handleEditClick = () => {
-    document.getElementById("logo-picker").click();
-  };
+  // check when all images are loaded
+  useEffect(() => {
+    const allImagesLoaded =
+      isBackgroundLoaded &&
+      isHexagonLoaded &&
+      isCircleLoaded &&
+      isCircleHoverLoaded;
 
-  const handleLogoChange = (event) => {
-    const file = event.target.files[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = (e) => {
-        // Update the logo image source
-        const logoElement = document.querySelector(`.${styles.schoolLogo}`);
-        logoElement.src = e.target.result;
-
-        // Here you can also handle uploading the file to your server
-        // uploadLogoToServer(file);
-      };
-      reader.readAsDataURL(file);
+    if (allImagesLoaded) {
+      // Add a small delay to ensure the opacity transition is complete
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 600); // matches your opacity transition duration
     }
-  };
+  }, [
+    isBackgroundLoaded,
+    isHexagonLoaded,
+    isCircleLoaded,
+    isCircleHoverLoaded,
+    setIsLoading,
+  ]);
 
-  // Add useEffect to handle background loading
+  // handle background loading
   useEffect(() => {
     const backgroundImage = new Image();
     const circleImage = new Image();
@@ -59,6 +63,31 @@ const Admin = () => {
       setIsHexagonLoaded(true);
     };
   }, []);
+
+  // Get toolbar height by comparing window and document heights
+  // const viewport = new ViewportCalculator();
+  // console.log("Toolbar Height: " + viewport.getToolbarHeight());
+  // console.log("VisualViewport Height: " + viewport.getVisualViewportHeight());
+
+  const handleEditClick = () => {
+    document.getElementById("logo-picker").click();
+  };
+
+  const handleLogoChange = (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        // Update the logo image source
+        const logoElement = document.querySelector(`.${styles.schoolLogo}`);
+        logoElement.src = e.target.result;
+
+        // Here you can also handle uploading the file to your server
+        // uploadLogoToServer(file);
+      };
+      reader.readAsDataURL(file);
+    }
+  };
 
   return (
     <div

@@ -106,3 +106,21 @@
   font-size: 0.8vw;
   z-index: 1;
 }
+
+@media (max-aspect-ratio: 4/3) {
+  .container {
+    gap: 1.3vw;
+  }
+
+  .back {
+    width: 14vw;
+  }
+
+  .backHover {
+    width: 14.5vw;
+  }
+
+  .text {
+    font-size: 0.9vw;
+  }
+}

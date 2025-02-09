@@ -234,6 +234,9 @@
 }
 
 @media (max-width: 1440px) {
+}
+
+@media (max-width: 1200px) {
   .container {
     display: none;
   }

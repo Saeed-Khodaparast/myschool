@@ -1,17 +1,21 @@
+body {
+  overflow-x: hidden;
+}
+
 .container {
-  height: 100vh;
-  min-height: 713px;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   background-size: cover;
+  /* overflow: hidden; */
   background-repeat: no-repeat;
   align-items: center;
   gap: 16px;
   color: white;
   position: relative;
-  background-image: url("/myschool/images/bg-admin.png");
-  background-position: -0.2vw -2.8vw;
+  /* background-position: -0.2vw -2.8vw; */
+  /* background-size: contain;*/
 }
 
 .circle {
@@ -19,14 +23,16 @@
   height: 22vw;
   background-image: url("/myschool/images/circle.svg");
   background-position: center;
+  background-size: 22vw 22vw;
   position: absolute;
-  top: -0.2vw;
-  left: 37.9vw;
+  top: 0;
+  left: 39vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background-repeat: no-repeat;
   align-items: center;
-  scale: 70%;
+  scale: 75%;
   transition: background-image 150ms;
 }
 .circle:hover {
@@ -55,8 +61,8 @@
   position: absolute;
   font-size: 1.35vw;
   text-align: center;
-  padding: 8px 0;
-  border-radius: 50px;
+  padding: 1vw 0;
+  border-radius: 20vw;
   background-color: var(--color-main-title-background);
 }
 
@@ -67,278 +73,690 @@
 }
 
 .editIcon {
-  width: 56px;
-  height: 56px;
-  padding: 12px;
+  width: 4vw;
+  height: 4vw;
+  padding: 0.7vw;
   position: absolute;
   border-radius: 100%;
-  top: calc(280px - 48px);
+  top: 15vw;
   background-color: var(--color-logo-circle-background);
   cursor: pointer;
 }
 
+.circle {
+  top: 1.5vw;
+  left: 38.5vw;
+}
+
+.title {
+  top: 23vw;
+}
+
 .exitContainer {
   position: absolute;
-  left: 5.1vw;
-  top: 5.5vw;
+  left: 6.7vw;
+  top: 7.9vw;
 }
 
 .userContainer {
   position: absolute;
-  right: 5.4vw;
-  top: 1.4vw;
+  right: 6.4vw;
+  top: 4vw;
 }
 
 .notifContainer {
   position: absolute;
-  right: 5.9vw;
-  top: 15.6vw;
+  right: 6.95vw;
+  top: 17.7vw;
 }
 
 .walContainer {
   position: absolute;
-  right: 5.9vw;
-  top: 25.5vw;
+  right: 6.94vw;
+  top: 27.4vw;
 }
 
 .ayContainer {
   position: absolute;
-  left: 64.7vw;
-  top: 30.6vw;
+  left: 64.5vw;
+  top: 42vw;
 }
 
 .miContainer {
   position: absolute;
-  left: 30.1vw;
-  top: 30.7vw;
+  left: 30.8vw;
+  top: 42vw;
 }
 
 .spContainer {
   position: absolute;
-  left: 47.1vw;
-  top: 30.6vw;
+  left: 47.3vw;
+  top: 42vw;
 }
 
 .setsContainer {
   position: absolute;
-  left: 30.72vw;
-  top: 40.67vw;
+  left: 23.2vw;
+  top: 56.6vw;
 }
 
 .supContainer {
   position: absolute;
-  left: 39.3vw;
-  top: 35.7vw;
+  left: 39.82vw;
+  top: 56.62vw;
 }
 
 .repContainer {
   position: absolute;
   left: 56.8vw;
-  top: 35.6vw;
+  top: 56.6vw;
 }
 
 .optContainer {
   position: absolute;
-  left: 65.9vw;
-  top: 40.6vw;
+  left: 74.1vw;
+  top: 56.6vw;
 }
 
-@media (max-height: 712px) {
-  .exitContainer {
-    left: 5.1vw;
-    top: 5.5vw;
+@media (max-aspect-ratio: 1/1) and (not (aspect-ratio: 1/1)) {
+  body {
+    overflow-x: auto;
   }
 
-  .userContainer {
-    right: 5.3vw;
-    top: 1.3vw;
-  }
-
-  .notifContainer {
-    right: 5.8vw;
-    top: 15.4vw;
-  }
-
-  .walContainer {
-    right: 5.8vw;
-    top: 25.3vw;
-  }
-
-  .ayContainer {
-    left: 63.9vw;
-    top: 30.3vw;
-  }
-
-  .miContainer {
-    left: 29.7vw;
-    top: 30.3vw;
-  }
-
-  .spContainer {
-    left: 46.6vw;
-    top: 30.35vw;
-  }
-
-  .setsContainer {
-    left: 30.41vw;
-    top: 40.18vw;
-  }
-
-  .supContainer {
-    left: 38.9vw;
-    top: 35.3vw;
-  }
-
-  .repContainer {
-    left: 56.2vw;
-    top: 35.2vw;
-  }
-
-  .optContainer {
-    left: 65.2vw;
-    top: 40.1vw;
-  }
-}
-
-@media (max-width: 1520px) {
-  .circle {
-    left: 37.8vw;
-  }
-}
-
-@media (max-width: 1490px) {
-  .userContainer {
-    right: 5.2vw;
-    top: 1.2vw;
-  }
-}
-
-@media (max-width: 1460px) {
-  .userContainer {
-    right: 5.25vw;
-    top: 1.08vw;
-  }
-}
-
-@media (max-width: 1440px) {
-}
-
-@media (max-width: 1400px) {
-  .exitContainer {
-    left: 5.1vw;
-    top: 5.5vw;
-  }
-
-  .userContainer {
-    right: 5.3vw;
-    top: 1.3vw;
-  }
-
-  .notifContainer {
-    right: 5.8vw;
-    top: 15.4vw;
-  }
-
-  .walContainer {
-    right: 5.8vw;
-    top: 25.3vw;
-  }
-
-  .ayContainer {
-    left: 63.9vw;
-    top: 30.3vw;
-  }
-
-  .miContainer {
-    left: 29.7vw;
-    top: 30.3vw;
-  }
-
-  .spContainer {
-    left: 46.6vw;
-    top: 30.35vw;
-  }
-
-  .setsContainer {
-    left: 21.64vw;
-    top: 45.1vw;
-  }
-
-  .supContainer {
-    left: 38.9vw;
-    top: 45.1vw;
-  }
-
-  .repContainer {
-    left: 56.1vw;
-    top: 45.1vw;
-  }
-
-  .optContainer {
-    left: 73.7vw;
-    top: 45vw;
-  }
-}
-
-@media (max-width: 1280px) {
-  .exitContainer {
-    left: 5.1vw;
-    top: 5.5vw;
-  }
-
-  .userContainer {
-    right: 5.3vw;
-    top: 1.3vw;
-  }
-
-  .notifContainer {
-    right: 5.8vw;
-    top: 15.4vw;
-  }
-
-  .walContainer {
-    right: 5.8vw;
-    top: 25.3vw;
-  }
-
-  .ayContainer {
-    left: 63.9vw;
-    top: 30.3vw;
-  }
-
-  .miContainer {
-    left: 29.7vw;
-    top: 30.3vw;
-  }
-
-  .spContainer {
-    left: 46.6vw;
-    top: 30.35vw;
-  }
-
-  .setsContainer {
-    left: 21.64vw;
-    top: 45.1vw;
-  }
-
-  .supContainer {
-    left: 38.9vw;
-    top: 45.1vw;
-  }
-
-  .repContainer {
-    left: 56.1vw;
-    top: 45.1vw;
-  }
-
-  .optContainer {
-    left: 75.5vw;
-    top: 46.3vw;
-  }
-}
-
-@media (max-width: 1200px) {
   .container {
-    display: none;
+    aspect-ratio: 1/1;
+    background-image: url("/myschool/images/bg-admin-1-1.png");
+    /* display: none; */
+  }
+
+  .circle {
+    width: 30vw;
+    height: 54vw;
+    top: -4vw;
+    left: 35vw;
+    background-size: 30vw 30vw;
+  }
+
+  .title {
+    width: 32vw;
+    top: 37vw;
+    font-size: 1.5vw;
+  }
+
+  .editIcon {
+    top: 34vw;
+  }
+
+  .exitContainer {
+    left: 17.1vw;
+    top: 17.18vw;
+  }
+
+  .userContainer {
+    right: 16.45vw;
+    top: 12.4vw;
+  }
+
+  .notifContainer {
+    right: 16.89vw;
+    top: 29.5vw;
+  }
+
+  .walContainer {
+    right: 16.89vw;
+    top: 41.8vw;
+  }
+
+  .ayContainer {
+    left: 68.85vw;
+    top: 72.4vw;
+  }
+
+  .miContainer {
+    left: 26.4vw;
+    top: 72.4vw;
+  }
+
+  .spContainer {
+    left: 47.33vw;
+    top: 72.4vw;
+  }
+
+  .setsContainer {
+    left: 16.6vw;
+    top: 78.65vw;
+  }
+
+  .supContainer {
+    left: 37.67vw;
+    top: 78.62vw;
+  }
+
+  .repContainer {
+    left: 59.1vw;
+    top: 78.6vw;
+  }
+
+  .optContainer {
+    left: 80.82vw;
+    top: 78.6vw;
+  }
+}
+
+@media (min-aspect-ratio: 1/1) and (max-aspect-ratio: 4/3) and (not (aspect-ratio: 4/3)) {
+  .container {
+    aspect-ratio: 1/1;
+    background-image: url("/myschool/images/bg-admin-1-1.png");
+    /* display: none; */
+  }
+
+  .circle {
+    width: 30vw;
+    height: 54vw;
+    top: -4vw;
+    left: 35vw;
+    background-size: 30vw 30vw;
+  }
+
+  .title {
+    width: 32vw;
+    top: 37vw;
+    font-size: 1.5vw;
+  }
+
+  .editIcon {
+    top: 34vw;
+  }
+
+  .exitContainer {
+    left: 17.1vw;
+    top: 17.18vw;
+  }
+
+  .userContainer {
+    right: 16.45vw;
+    top: 12.4vw;
+  }
+
+  .notifContainer {
+    right: 16.89vw;
+    top: 29.5vw;
+  }
+
+  .walContainer {
+    right: 16.89vw;
+    top: 41.8vw;
+  }
+
+  .ayContainer {
+    left: 68.85vw;
+    top: 72.4vw;
+  }
+
+  .miContainer {
+    left: 26.4vw;
+    top: 72.4vw;
+  }
+
+  .spContainer {
+    left: 47.33vw;
+    top: 72.4vw;
+  }
+
+  .setsContainer {
+    left: 16.6vw;
+    top: 78.65vw;
+  }
+
+  .supContainer {
+    left: 37.67vw;
+    top: 78.62vw;
+  }
+
+  .repContainer {
+    left: 59.1vw;
+    top: 78.6vw;
+  }
+
+  .optContainer {
+    left: 80.82vw;
+    top: 78.6vw;
+  }
+}
+
+@media (min-aspect-ratio: 4/3) and (max-aspect-ratio: 3/2) and (not (aspect-ratio: 3/2)) {
+  .container {
+    aspect-ratio: 4/3;
+    background-image: url("/myschool/images/bg-admin-4-3.png");
+    /* display: none; */
+  }
+
+  .circle {
+    top: 2.8vw;
+    left: 38.8vw;
+  }
+
+  .title {
+    top: 25vw;
+  }
+
+  .exitContainer {
+    left: 7.2vw;
+    top: 10vw;
+  }
+
+  .userContainer {
+    right: 6.7vw;
+    top: 6.05vw;
+  }
+
+  .notifContainer {
+    right: 7.2vw;
+    top: 19.7vw;
+  }
+
+  .walContainer {
+    right: 7.15vw;
+    top: 29.35vw;
+  }
+
+  .ayContainer {
+    left: 64.4vw;
+    top: 53.45vw;
+  }
+
+  .miContainer {
+    left: 31.1vw;
+    top: 53.45vw;
+  }
+
+  .spContainer {
+    left: 47.5vw;
+    top: 53.45vw;
+  }
+
+  .setsContainer {
+    left: 23.43vw;
+    top: 58.22vw;
+  }
+
+  .supContainer {
+    left: 40vw;
+    top: 58.22vw;
+  }
+
+  .repContainer {
+    left: 56.8vw;
+    top: 58.22vw;
+  }
+
+  .optContainer {
+    left: 73.9vw;
+    top: 58.22vw;
+  }
+}
+
+@media (min-aspect-ratio: 3/2) and (max-aspect-ratio: 16/10) and (not (aspect-ratio: 16/10)) {
+  .container {
+    aspect-ratio: 3/2;
+    background-image: url("/myschool/images/bg-admin-3-2.png");
+    /* display: none; */
+  }
+
+  .circle {
+    top: 1.5vw;
+    left: 38.5vw;
+  }
+
+  .title {
+    top: 23vw;
+  }
+
+  .exitContainer {
+    left: 6.7vw;
+    top: 7.9vw;
+  }
+
+  .userContainer {
+    right: 6.4vw;
+    top: 4vw;
+  }
+
+  .notifContainer {
+    right: 6.95vw;
+    top: 17.7vw;
+  }
+
+  .walContainer {
+    right: 6.94vw;
+    top: 27.4vw;
+  }
+
+  .ayContainer {
+    left: 64.5vw;
+    top: 42vw;
+  }
+
+  .miContainer {
+    left: 30.8vw;
+    top: 42vw;
+  }
+
+  .spContainer {
+    left: 47.3vw;
+    top: 42vw;
+  }
+
+  .setsContainer {
+    left: 23.2vw;
+    top: 56.6vw;
+  }
+
+  .supContainer {
+    left: 39.82vw;
+    top: 56.62vw;
+  }
+
+  .repContainer {
+    left: 56.8vw;
+    top: 56.6vw;
+  }
+
+  .optContainer {
+    left: 74.1vw;
+    top: 56.6vw;
+  }
+}
+
+@media (min-aspect-ratio: 16/10) and (max-aspect-ratio: 16/9) and (not (aspect-ratio: 16/9)) {
+  .container {
+    aspect-ratio: 16/10;
+    background-image: url("/myschool/images/bg-admin-16-10.png");
+    /* background: none; */
+  }
+
+  .circle {
+  }
+
+  .title {
+    top: 22vw;
+  }
+
+  .exitContainer {
+    left: 6.38vw;
+    top: 7.24vw;
+  }
+
+  .userContainer {
+    right: 6.34vw;
+    top: 3.8vw;
+  }
+
+  .notifContainer {
+    right: 6.5vw;
+    top: 17.1vw;
+  }
+
+  .walContainer {
+    right: 6.47vw;
+    top: 26.83vw;
+  }
+
+  .ayContainer {
+    left: 64.6vw;
+    top: 41.6vw;
+  }
+
+  .miContainer {
+    left: 30.68vw;
+    top: 41.6vw;
+  }
+
+  .spContainer {
+    left: 47.47vw;
+    top: 41.6vw;
+  }
+
+  .setsContainer {
+    left: 22.9vw;
+    top: 46.5vw;
+  }
+
+  .supContainer {
+    left: 39.7vw;
+    top: 46.5vw;
+  }
+
+  .repContainer {
+    left: 56.88vw;
+    top: 46.5vw;
+  }
+
+  .optContainer {
+    left: 74.4vw;
+    top: 46.5vw;
+  }
+}
+
+@media (min-aspect-ratio: 16/9) and (max-aspect-ratio: 9/5) and (not (aspect-ratio: 9/5)) {
+  .container {
+    aspect-ratio: 16/9;
+    background-image: url("/myschool/images/bg-admin-16-9.png");
+    /* background: none; */
+  }
+
+  .circle {
+    left: 39vw;
+    scale: 85%;
+  }
+
+  .title {
+    top: 21vw;
+  }
+
+  .exitContainer {
+    left: 7.48vw;
+    top: 6.95vw;
+  }
+
+  .userContainer {
+    right: 6.84vw;
+    top: 2.84vw;
+  }
+
+  .notifContainer {
+    right: 7.4vw;
+    top: 16.5vw;
+  }
+
+  .walContainer {
+    right: 7.4vw;
+    top: 26.1vw;
+  }
+
+  .ayContainer {
+    left: 64.35vw;
+    top: 40.4vw;
+  }
+
+  .miContainer {
+    left: 31.2vw;
+    top: 40.4vw;
+  }
+
+  .spContainer {
+    left: 47.6vw;
+    top: 40.4vw;
+  }
+
+  .setsContainer {
+    left: 23.6vw;
+    top: 45.2vw;
+  }
+
+  .supContainer {
+    position: absolute;
+    left: 40.15vw;
+    top: 45.2vw;
+  }
+
+  .repContainer {
+    position: absolute;
+    left: 56.8vw;
+    top: 45.2vw;
+  }
+
+  .optContainer {
+    left: 73.85vw;
+    top: 45.2vw;
+  }
+}
+
+@media (min-aspect-ratio: 9/5) and (max-aspect-ratio: 43/20) and (not (aspect-ratio: 43/20)) {
+  .container {
+    aspect-ratio: 9/5;
+    background-image: url("/myschool/images/bg-admin-9-5.png");
+    /* background: none; */
+  }
+
+  .circle {
+    left: 39vw;
+    scale: 75%;
+  }
+
+  .title {
+    top: 23vw;
+  }
+
+  .exitContainer {
+    left: 9.1vw;
+    top: 7.3vw;
+  }
+
+  .userContainer {
+    right: 8vw;
+    top: 3.35vw;
+  }
+
+  .notifContainer {
+    right: 8.5vw;
+    top: 16.6vw;
+  }
+
+  .walContainer {
+    right: 8.45vw;
+    top: 25.9vw;
+  }
+
+  .ayContainer {
+    left: 64.05vw;
+    top: 39.75vw;
+  }
+
+  .miContainer {
+    left: 32vw;
+    top: 39.75vw;
+  }
+
+  .spContainer {
+    left: 47.8vw;
+    top: 39.75vw;
+  }
+
+  .setsContainer {
+    left: 24.7vw;
+    top: 44.5vw;
+  }
+
+  .supContainer {
+    position: absolute;
+    left: 40.6vw;
+    top: 44.48vw;
+  }
+
+  .repContainer {
+    position: absolute;
+    left: 56.8vw;
+    top: 44.48vw;
+  }
+
+  .optContainer {
+    left: 73.3vw;
+    top: 44.48vw;
+  }
+}
+
+@media (min-aspect-ratio: 43/20) {
+  .container {
+    aspect-ratio: 43/20;
+    background-image: url("/myschool/images/bg-admin-43-20.png");
+    /* background: none; */
+  }
+
+  .circle {
+    top: 0vw;
+    left: 38.9vw;
+  }
+
+  .title {
+    width: 28vw;
+    top: 20vw;
+    font-size: 1.25vw;
+    padding: 0.8vw 0;
+  }
+
+  .exitContainer {
+    left: 7.4vw;
+    top: 6.5vw;
+  }
+
+  .userContainer {
+    right: 7.1vw;
+    top: 2.3vw;
+  }
+
+  .notifContainer {
+    right: 7.6vw;
+    top: 16vw;
+  }
+
+  .walContainer {
+    right: 7.6vw;
+    top: 25.6vw;
+  }
+
+  .ayContainer {
+    left: 64.1vw;
+    top: 30.4vw;
+  }
+
+  .miContainer {
+    left: 31.1vw;
+    top: 30.4vw;
+  }
+
+  .spContainer {
+    left: 47.45vw;
+    top: 30.31vw;
+  }
+
+  .setsContainer {
+    left: 31.81vw;
+    top: 39.93vw;
+  }
+
+  .supContainer {
+    left: 40vw;
+    top: 35.1vw;
+  }
+
+  .repContainer {
+    left: 56.7vw;
+    top: 35.1vw;
+  }
+
+  .optContainer {
+    left: 65.35vw;
+    top: 39.93vw;
   }
 }

@@ -1,6 +1,11 @@
+body {
+  overflow-x: auto;
+}
+
 .container {
   height: 100vh;
-  min-height: 713px;
+  min-height: 712px;
+  min-width: 500px;
   background-image: url("/myschool/images/bg-login.png");
   background-size: cover;
   background-position: center;
@@ -11,18 +16,20 @@
   gap: 8px;
   color: white;
   position: relative;
+  overflow: auto;
 }
 
 .logo {
-  width: 21vw;
+  min-width: 232px;
+  max-width: 312px;
   top: calc(160px - 24px);
   position: absolute;
-  opacity: 0.05;
+  opacity: 0.03;
 }
 
 .topImage {
-  width: 5vw;
-  height: 5vw;
+  width: 72px;
+  height: 72px;
   padding: 8px;
 }
 
@@ -33,7 +40,7 @@
 }
 
 .form {
-  width: 18vw;
+  width: 276px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -238,8 +245,27 @@
   }
 }
 
-@media (max-width: 1200px) {
-  .container {
-    display: none;
+@media (max-width: 1300px) {
+  .logo {
+    width: 19vw;
+    top: calc(160px + 8px);
+  }
+
+  .title {
+    font-size: 15px;
+  }
+
+  .form {
+    gap: 0;
+  }
+
+  .forgetPass {
+    margin-top: 4px;
+  }
+
+  .button {
+    width: calc(118px - 32px);
+    height: 40px;
+    margin-bottom: 24px;
   }
 }

@@ -1,6 +1,11 @@
+body {
+  overflow-x: auto;
+}
+
 .container {
   height: 100vh;
-  min-height: 713px;
+  min-height: 712px;
+  min-width: 500px;
   background-image: url("/myschool/images/bg-login.png");
   background-size: cover;
   background-position: center;
@@ -14,10 +19,11 @@
 }
 
 .logo {
-  width: 21vw;
+  min-width: 232px;
+  max-width: 312px;
   top: calc(160px - 24px);
   position: absolute;
-  opacity: 0.05;
+  opacity: 0.03;
 }
 
 .content {
@@ -31,8 +37,8 @@
 }
 
 .topImage {
-  width: 5vw;
-  height: 5vw;
+  width: 72px;
+  height: 72px;
   padding: 8px;
 }
 
@@ -120,26 +126,22 @@
     top: calc(160px + 8px);
   }
 
+  .content {
+    margin-top: 1vw;
+  }
+
   .title {
-    font-size: 13px;
-  }
-
-  .form {
-    gap: 0;
-  }
-
-  .forgetPass {
     margin-top: 4px;
+    padding: 8px;
+    font-size: 12.3px;
+  }
+
+  .editPhoneNumber {
+    margin-left: 12px;
   }
 
   .button {
     width: calc(118px - 24px);
-    margin-top: 8px;
-  }
-}
-
-@media (max-width: 1200px) {
-  .container {
-    display: none;
+    margin-top: 6px;
   }
 }
